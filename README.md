@@ -1,5 +1,7 @@
 # Clippy for Omarchy
 
+<img src="preview.png" width="800" alt="Clippy in the corner of an Omarchy desktop, showing a hotkey tip from the manual">
+
 A paperclip in the bottom-right corner of your screen. His eyes follow your mouse, he bends his wire into the shapes the original Office Assistant knew, curls up when you walk away, and every now and then he taps the glass with a tip from the [Omarchy manual](https://omarchy.org/manual/).
 
 ## Install
