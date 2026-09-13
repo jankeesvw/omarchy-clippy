@@ -1,0 +1,90 @@
+#!/usr/bin/python3
+"""Stream the Hyprland cursor position as "x y" lines, only when it changes.
+
+A layer surface only sees the pointer while it is over the surface itself, so
+Clippy cannot follow the mouse from QML alone. This asks Hyprland's request
+socket for `cursorpos` instead, a few bytes per round trip, and slows down
+while the pointer is resting.
+
+Run as: /usr/bin/python3 -I -S clippy-cursor
+"""
+import os
+import re
+import socket
+import sys
+import time
+
+REPLY_LIMIT = 64
+FAST = 1 / 30      # while the pointer moves
+SLOW = 1 / 5       # after it has rested for a while
+REST_AFTER = 2.0
+FAILURE_BUDGET = 40
+
+POSITION = re.compile(rb"\s*(-?\d{1,6}), (-?\d{1,6})\s*")
+
+
+def socket_path():
+  signature = os.environ.get("HYPRLAND_INSTANCE_SIGNATURE", "")
+  runtime = os.environ.get("XDG_RUNTIME_DIR", "")
+  if not re.fullmatch(r"[A-Za-z0-9_]{1,160}", signature):
+    return None
+  if not re.fullmatch(r"/run/user/\d{1,10}", runtime):
+    return None
+  return f"{runtime}/hypr/{signature}/.socket.sock"
+
+
+def ask(path):
+  with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM | socket.SOCK_CLOEXEC) as sock:
+    sock.settimeout(0.5)
+    sock.connect(path)
+    sock.sendall(b"cursorpos")
+    reply = b""
+    while len(reply) <= REPLY_LIMIT:
+      chunk = sock.recv(REPLY_LIMIT + 1 - len(reply))
+      if not chunk:
+        break
+      reply += chunk
+  if len(reply) > REPLY_LIMIT:
+    raise ValueError("reply too long")
+  match = POSITION.fullmatch(reply)
+  if not match:
+    raise ValueError("unexpected reply")
+  return int(match.group(1)), int(match.group(2))
+
+
+def main():
+  path = socket_path()
+  if path is None:
+    return 2
+
+  parent = os.getppid()
+  last = None
+  moved_at = 0.0
+  failures = 0
+
+  while os.getppid() == parent:
+    started = time.monotonic()
+    try:
+      position = ask(path)
+      failures = 0
+      if position != last:
+        sys.stdout.write(f"{position[0]} {position[1]}\n")
+        sys.stdout.flush()
+        last = position
+        moved_at = started
+    except BrokenPipeError:
+      return 0
+    except (OSError, ValueError):
+      failures += 1
+      if failures >= FAILURE_BUDGET:
+        return 1
+      time.sleep(min(2.0, 0.1 * failures))
+      continue
+
+    interval = FAST if started - moved_at < REST_AFTER else SLOW
+    time.sleep(max(0.0, interval - (time.monotonic() - started)))
+  return 0
+
+
+if __name__ == "__main__":
+  sys.exit(main())
