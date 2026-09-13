@@ -167,7 +167,11 @@ Item {
     "Quick one!"
   ]
 
+  property string agentText: ""
+
   readonly property string bubbleBody: {
+    if (root.bubbleKind === "agent")
+      return root.tipMarkup(root.agentText)
     if (root.bubbleKind === "hello")
       return "It looks like you're using Omarchy! Click me any time and I'll show you something from the manual."
     if (root.bubbleKind === "goodbye")
@@ -233,6 +237,57 @@ Item {
     root.openBubble("bang")
   }
 
+  // Anything can ask Clippy to say something: an agent that finished, a build
+  // that broke. Control characters go, the length is capped, and the text is
+  // escaped like a tip, so `code` is the only markup that survives.
+  function plainLine(value, max) {
+    return String(value || "").replace(/[ --]+/g, " ").trim().slice(0, max)
+  }
+
+  property var agentLinks: []
+
+  // Links from outside: https to anywhere, http only to this machine, and
+  // nothing with credentials, whitespace, quotes or control characters in it.
+  // omarchy-launch-browser rewrites "--private" inside its arguments, so that
+  // is refused too.
+  function safeUrl(value) {
+    var url = String(value || "")
+    if (url.length === 0 || url.length > 2048) return ""
+    if (/[\s --<>"'`\\]/.test(url) || url.indexOf("--private") >= 0) return ""
+    var match = /^(https?):\/\/([^\/?#]*)/i.exec(url)
+    if (!match || match[2].indexOf("@") >= 0) return ""
+    var host = match[2].replace(/:\d{1,5}$/, "").toLowerCase()
+    if (host === "") return ""
+    if (match[1].toLowerCase() === "http" && !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(host)) return ""
+    return url
+  }
+
+  function linkButton(label, url) {
+    var cleanLabel = root.plainLine(label, 24)
+    var cleanUrl = root.safeUrl(url)
+    return cleanLabel !== "" && cleanUrl !== "" ? { label: cleanLabel, url: cleanUrl } : null
+  }
+
+  function openLink(link) {
+    var url = link ? root.safeUrl(link.url) : ""
+    if (url === "") return
+    Quickshell.execDetached(["omarchy-launch-browser", url])
+    root.closeBubble()
+    root.play("check")
+  }
+
+  function say(title, text, links) {
+    var body = root.plainLine(text, 300)
+    if (body === "") return false
+    root.tip = null
+    root.agentText = body
+    root.agentLinks = (links || []).filter(function(link) { return link !== null }).slice(0, 2)
+    root.bubbleKind = "agent"
+    root.bubbleTitle = root.plainLine(title, 80) || "Your agent says"
+    root.openBubble("attention")
+    return true
+  }
+
   function askGoodbye() {
     root.tip = null
     root.bubbleKind = "goodbye"
@@ -246,7 +301,7 @@ Item {
     root.lastMoveAt = Date.now()
     root.interacted()
     root.bubbleOpen = true
-    autoHide.interval = root.bubbleKind === "tip" ? 30000 : 14000
+    autoHide.interval = root.bubbleKind === "tip" || root.bubbleKind === "agent" ? 30000 : 14000
     autoHide.restart()
     root.play(animation)
     if (animation !== "point") root.glanceAtBubble()
@@ -267,13 +322,18 @@ Item {
   }
 
   function primaryAction() {
-    if (root.bubbleKind === "tip") root.openManual()
+    if (root.bubbleKind === "agent") {
+      if (root.agentLinks.length > 0) root.openLink(root.agentLinks[0])
+      else { root.closeBubble(); root.play("check") }
+    }
+    else if (root.bubbleKind === "tip") root.openManual()
     else if (root.bubbleKind === "goodbye") root.goAway()
     else root.showTip(root.tipReaction())
   }
 
   function secondaryAction() {
-    if (root.bubbleKind === "tip") root.showTip(root.tipReaction())
+    if (root.bubbleKind === "agent" && root.agentLinks.length > 1) root.openLink(root.agentLinks[1])
+    else if (root.bubbleKind === "tip") root.showTip(root.tipReaction())
     else if (root.bubbleKind === "goodbye") { root.closeBubble(); root.play("hop") }
     else root.closeBubble()
   }
@@ -1028,6 +1088,26 @@ Item {
       return "ok"
     }
     function fidget(): string { root.flourish(); return "ok" }
+    // Shows a bubble with your own title and text, e.g. from an agent hook.
+    function say(title: string, text: string): string {
+      root.summon()
+      return root.say(title, text, []) ? "ok" : "empty text"
+    }
+    // The same, with one link button next to Later.
+    function sayLink(title: string, text: string, label: string, url: string): string {
+      var link = root.linkButton(label, url)
+      if (!link) return "invalid link"
+      root.summon()
+      return root.say(title, text, [link]) ? "ok" : "empty text"
+    }
+    // The same, with two link buttons.
+    function sayLinks(title: string, text: string, label1: string, url1: string, label2: string, url2: string): string {
+      var first = root.linkButton(label1, url1)
+      var second = root.linkButton(label2, url2)
+      if (!first || !second) return "invalid link"
+      root.summon()
+      return root.say(title, text, [first, second]) ? "ok" : "empty text"
+    }
     // Plays one named animation; anything outside the list is ignored.
     function animate(name: string): string {
       var key = String(name).slice(0, 16)
@@ -1478,7 +1558,7 @@ Item {
       id: bubble
       readonly property int pad: root.px(12)
 
-      width: root.px(300)
+      width: root.px(330)
       height: bubbleColumn.implicitHeight + pad * 2
       x: Math.max(root.px(8), Math.min(stage.x + stage.width - width + root.px(6), win.width - width - root.px(8)))
       // Above him, unless he has been dragged too close to the top.
@@ -1616,12 +1696,14 @@ Item {
 
             BubbleButton {
               label: root.bubbleKind === "tip" ? "Open manual"
+                : root.bubbleKind === "agent" ? (root.agentLinks.length > 0 ? root.agentLinks[0].label : "Nice!")
                 : root.bubbleKind === "goodbye" ? "Ride off" : "Show me a tip"
               onActivated: root.primaryAction()
             }
 
             BubbleButton {
               label: root.bubbleKind === "tip" ? "Next tip"
+                : root.bubbleKind === "agent" && root.agentLinks.length > 1 ? root.agentLinks[1].label
                 : root.bubbleKind === "goodbye" ? "Stay" : "Later"
               onActivated: root.secondaryAction()
             }

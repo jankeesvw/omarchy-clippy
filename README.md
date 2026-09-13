@@ -75,6 +75,24 @@ omarchy-shell jankeesvw.clippy fidget   # play a random animation
 omarchy-shell jankeesvw.clippy animate atom   # play one from the repertoire above
 ```
 
+## Let him tell you things
+
+Anything that can run a command can make Clippy say something, which makes him a nice companion for a coding agent that finished, a build that broke, or a deploy that went out:
+
+<img src="screenshots/agent-bubble.png" width="400" alt="Clippy saying that a pull request is ready, with Open PR and Preview buttons">
+
+```bash
+omarchy-shell jankeesvw.clippy say "It looks like your agent is done!" 'Claude finished `my-project`.'
+
+omarchy-shell jankeesvw.clippy sayLink "Your PR is ready" 'CI passed on `feature-branch`.' \
+  "Open PR" "https://github.com/you/project/pull/42"
+
+omarchy-shell jankeesvw.clippy sayLinks "Deploy finished" "Version 1.4 is live." \
+  "Open site" "https://example.com" "Open logs" "http://localhost:3000/logs"
+```
+
+The title is capped at 80 characters, the text at 300, and a button label at 24. Text between backticks is shown in bold; any other markup is escaped. Buttons open their link in your default browser. Links must be `https://`, or `http://` to `localhost`, and may not contain credentials, whitespace or quotes; a rejected link makes the command answer `invalid link` instead of showing the bubble. Nothing that talks to Clippy over IPC can open anything by itself: a link only opens when you click its button.
+
 For example in `~/.config/hypr/bindings.lua`:
 
 ```lua
