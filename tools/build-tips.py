@@ -32,8 +32,8 @@ def clean(text):
   text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)      # links keep their label
   text = re.sub(r"(?<![A-Za-z0-9])_([^_]+)_(?![A-Za-z0-9])", r"\1", text)
   text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-  # Em-dashes read as machine-written. A lone "—" is an empty table cell; keep it.
-  text = re.sub(r"(?<=\S)\s*—\s*(?=\S)", ", ", text)
+  # Em-dashes read as machine-written. A lone dash is an empty table cell; keep it.
+  text = re.sub(r"(?<=\S)\s*\u2014\s*(?=\S)", ", ", text)
   text = re.sub(r"\s+", " ", text)
   return text.strip()
 
@@ -76,7 +76,7 @@ def tips_from_table(rows, emit):
       if len(row) <= max(k, d):
         continue
       key, desc = row[k], clean(row[d])
-      if not keyish(key) or not desc or desc in ("—", "-"):
+      if not keyish(key) or not desc or desc in ("\u2014", "-"):
         continue
       text = f"{as_code(key)}: {desc[0].upper() + desc[1:]}"
       if cmd_cols and len(row) > cmd_cols[0] and "omarchy" in row[cmd_cols[0]]:
@@ -93,7 +93,7 @@ def tips_from_table(rows, emit):
         if i >= len(row):
           continue
         action = clean(row[i])
-        if not action or action in ("—", "-"):
+        if not action or action in ("\u2014", "-"):
           continue
         if h in names:
           emit(f"{names[h]} the {widget} widget in the bar: {action[0].lower() + action[1:]}.")

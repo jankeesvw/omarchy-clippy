@@ -10,6 +10,10 @@ A paperclip in the bottom-right corner of your screen. His eyes follow your mous
 omarchy plugin add https://github.com/jankeesvw/omarchy-clippy --enable
 ```
 
+## Requirements
+
+Omarchy 4 (Quattro) on Hyprland. Clippy uses only what Omarchy already ships: the system `python3` for the cursor helper and `omarchy-launch-webapp` to open the manual. No packages to install, no accounts, no API keys.
+
 ## Using him
 
 | Do | He |
@@ -95,7 +99,7 @@ A layer surface only receives pointer positions while the pointer is over it, so
 
 ## Privacy
 
-The cursor position never leaves the shell process. The only network access is the manual page you open with the Open manual button, in your browser.
+The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyprland's socket and hands it to the shell over a pipe, and nothing is logged or stored. Clippy writes no files. The only network access is the manual page you open with the Open manual button, in your browser.
 
 ## Removing
 
@@ -107,4 +111,6 @@ Clippy writes no files, so there is nothing left behind besides his entry in `~/
 
 ## License
 
-MIT. Clippy here is an original drawing of a paperclip, not Microsoft's artwork.
+MIT. Clippy here is an original drawing of a paperclip, not Microsoft's artwork; the animations are inspired by the Office Assistant's repertoire, and no original assets are used.
+
+The tips in `Tips.js` are sentences and hotkey tables taken from the [Omarchy manual](https://github.com/omacom/omarchy), copyright David Heinemeier Hansson, released under the MIT License.
