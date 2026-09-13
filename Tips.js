@@ -2205,18 +2205,6 @@ var tips = [
   "text": "You install a new Arch package by going to Install > Package in the Omarchy menu (`Super + Space`) and typing the package you want."
  },
  {
-  "page": "Other Packages",
-  "section": "",
-  "url": "https://omarchy.org/manual/other-packages/",
-  "text": "(You can also do it manually using `omarchy pkg add [package]` in the terminal)."
- },
- {
-  "page": "Other Packages",
-  "section": "",
-  "url": "https://omarchy.org/manual/other-packages/",
-  "text": "(You can also do it manually using `omarchy pkg drop [package]`)."
- },
- {
   "page": "Updates",
   "section": "",
   "url": "https://omarchy.org/manual/updates/",
@@ -2367,12 +2355,6 @@ var tips = [
   "text": "You can use this with Omarchy by running Setup > Security > Fingerprint in the Omarchy menu (`Super + Space`)."
  },
  {
-  "page": "Hardware authentication",
-  "section": "Fido2 authentication",
-  "url": "https://omarchy.org/manual/hardware-authentication/",
-  "text": "If you're using a Fido2 device, you can set it up for `sudo` authentication using Setup > Security > Fido2 in the Omarchy menu (`Super + Space`)."
- },
- {
   "page": "Fonts",
   "section": "",
   "url": "https://omarchy.org/manual/fonts/",
@@ -2455,11 +2437,5 @@ var tips = [
   "section": "",
   "url": "https://omarchy.org/manual/system-snapshots/",
   "text": "Alternatively, you can utilize `omarchy-snapshot restore`."
- },
- {
-  "page": "Security",
-  "section": "Passwordless sudo",
-  "url": "https://omarchy.org/manual/security/",
-  "text": "Run it again before the timer runs out to end it early, and pass your own number of minutes with `omarchy-sudo-passwordless 30` if 15 isn't enough."
  }
 ];

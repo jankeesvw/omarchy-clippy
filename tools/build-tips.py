@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Build tips.json out of the Omarchy manual.
+"""Build Tips.js out of the Omarchy manual.
 
 The installed Omarchy does not ship the manual, so the tips are extracted once
 from a checkout of github.com/omacom/omarchy and committed with the plugin.
 Nothing is read or fetched at runtime.
 
-  tools/build-tips.py ~/Documents/github.com/omacom/omarchy/manual > tips.json
+  tools/build-tips.py ~/Documents/github.com/omacom/omarchy/manual > Tips.js
 """
 import json
 import pathlib
@@ -19,6 +19,10 @@ MIN_TEXT = 40
 
 # Pages that are about installing or edge cases rather than daily use.
 SKIP_PAGES = {"welcome-to-omarchy", "unattended-installs", "dual-boot-install", "omarchy-on"}
+
+# A friendly paperclip should not nudge anyone towards privilege or package
+# changes, so tips about those stay in the manual.
+SENSITIVE = re.compile(r"\b(sudo|pkexec|pacman|yay|paru|passwordless)\b|pkg[ -](add|drop|install|remove)", re.I)
 
 # Sentences that lean on the sentence before them read as nonsense on their own.
 DANGLING = re.compile(
@@ -142,6 +146,8 @@ def build(manual_dir):
       if not (MIN_TEXT // 2 <= len(text) <= MAX_TEXT):
         return
       if text.count("`") % 2:
+        return
+      if SENSITIVE.search(text) or SENSITIVE.search(section):
         return
       norm = re.sub(r"\W+", " ", text.lower()).strip()
       if norm in seen:
