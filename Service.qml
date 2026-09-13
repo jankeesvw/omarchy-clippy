@@ -51,6 +51,7 @@ Item {
   readonly property int marginX: settingInt("marginX", 24, 0, 4000)
   readonly property int marginY: settingInt("marginY", 24, 0, 4000)
   readonly property bool greeting: setting("greeting", true) !== false
+  readonly property bool dodge: setting("dodge", true) !== false
   readonly property string monitorSetting: {
     var value = String(setting("monitor", ""))
     return /^[A-Za-z0-9._-]{1,64}$/.test(value) ? value : ""
@@ -66,6 +67,10 @@ Item {
   Connections {
     target: Hyprland
     function onFocusedMonitorChanged() { root.latchStartMonitor() }
+    // Focusing a window means you are done with Clippy.
+    function onRawEvent(event) {
+      if (root.keysWanted && event && String(event.name).indexOf("activewindow") === 0) root.deselect()
+    }
   }
 
   readonly property var targetScreen: {
@@ -101,6 +106,16 @@ Item {
   property var tip: null
   property bool hovered: false
   property bool sleeping: false
+
+  // Dragging, selection and getting out of the way.
+  property bool dragging: false
+  property int posRight: 0
+  property int posBottom: 0
+  property bool keysWanted: false
+  readonly property bool selected: root.keysWanted && root.present
+  property bool ghost: false
+  property bool claimed: false
+  property real dwellSince: 0
 
   property real cursorX: 0
   property real cursorY: 0
@@ -295,6 +310,7 @@ Item {
     root.lastMoveAt = Date.now()
     root.helperRestarts = 0
     if (root.sleeping) root.wake()
+    root.releaseKeysIfAway()
   }
 
   Process {
@@ -356,6 +372,152 @@ Item {
     id: glanceTimer
     interval: 1300
     onTriggered: if (root.lookMode === "bubble") root.lookMode = "cursor"
+  }
+
+  // ------------------------------------------------- moving him around
+
+  function moveTo(right, bottom) {
+    root.posRight = Math.round(Math.max(0, Math.min(win.width - stage.width, right)))
+    root.posBottom = Math.round(Math.max(0, Math.min(win.height - stage.height, bottom)))
+  }
+
+  function nudge(dx, dy) {
+    root.moveTo(root.posRight - dx, root.posBottom - dy)
+    saveTimer.restart()
+  }
+
+  // The position lives on our own plugins[] entry in shell.json, merged with
+  // whatever other settings the entry already carries.
+  function savePosition() {
+    if (!root.shell || typeof root.shell.updateEntryInline !== "function") return
+    var settings = {}
+    var cfg = root.shell.shellConfig
+    var list = cfg && Array.isArray(cfg.plugins) ? cfg.plugins : []
+    for (var i = 0; i < list.length; i++) {
+      var entry = list[i]
+      if (entry && String(entry.id || "") === root.pluginId)
+        for (var key in entry) if (key !== "id") settings[key] = entry[key]
+    }
+    settings.marginX = root.posRight
+    settings.marginY = root.posBottom
+    root.shell.updateEntryInline(root.pluginId, settings)
+  }
+
+  Timer {
+    id: saveTimer
+    interval: 700
+    onTriggered: root.savePosition()
+  }
+
+  function beginDrag() {
+    if (root.dragging || greetAnim.running || byeAnim.running) return
+    dropAnim.stop()
+    if (root.sleeping) { root.sleeping = false; sleepAnim.stop() }
+    root.stopActions()
+    root.openness = 1
+    root.eyeBoost = 1.25
+    root.ghost = false
+    root.dragging = true
+    grab.moved = true
+  }
+
+  function endDrag() {
+    root.dragging = false
+    root.interacted()
+    root.savePosition()
+    dropAnim.start()
+  }
+
+  SequentialAnimation {
+    id: dropAnim
+    ParallelAnimation {
+      NumberAnimation { target: shake; property: "angle"; to: 0; duration: 700; easing.type: Easing.OutElastic }
+      NumberAnimation { target: root; property: "eyeBoost"; to: 1; duration: 300; easing.type: Easing.OutQuad }
+    }
+  }
+
+  // Clippy only has the keyboard while you are dealing with him. A layer that
+  // asks for the keyboard on demand is handed it the moment it appears, so he
+  // asks for none at all until you click him, and gives it back as soon as
+  // you press Escape, wait a few seconds, move away, or focus a window.
+  function claimKeys() {
+    root.keysWanted = true
+    keyRelease.restart()
+    Qt.callLater(function() { keyTarget.forceActiveFocus() })
+  }
+
+  function deselect() {
+    root.keysWanted = false
+    keyRelease.stop()
+  }
+
+  Timer {
+    id: keyRelease
+    interval: 8000
+    onTriggered: root.deselect()
+  }
+
+  function releaseKeysIfAway() {
+    if (!root.keysWanted || !win.screen) return
+    var sx = win.screen.x, sy = win.screen.y
+    var margin = root.px(160)
+    var left = sx + Math.min(stage.x, bubble.visible ? bubble.x : stage.x) - margin
+    var right = sx + Math.max(stage.x + stage.width, bubble.visible ? bubble.x + bubble.width : 0) + margin
+    var top = sy + Math.min(stage.y, bubble.visible ? bubble.y : stage.y) - margin
+    var bottom = sy + Math.max(stage.y + stage.height, bubble.visible ? bubble.y + bubble.height : 0) + margin
+    if (root.cursorX < left || root.cursorX > right || root.cursorY < top || root.cursorY > bottom)
+      root.deselect()
+  }
+
+  // Getting out of the way: when the pointer comes near without aiming for
+  // him, he turns see-through and lets clicks pass. Rest the pointer on him
+  // for a moment and he is solid again.
+  function updateGhost() {
+    if (!root.dodge || !root.present || root.dragging || root.bubbleOpen || root.selected
+        || root.sleeping || !root.cursorKnown || !win.screen) {
+      root.ghost = false
+      root.claimed = false
+      root.dwellSince = 0
+      return
+    }
+    var left = win.screen.x + stage.x
+    var top = win.screen.y + stage.y + stage.height - body.height
+    var right = left + stage.width
+    var bottom = top + body.height
+    var margin = root.px(36)
+    var cx = root.cursorX, cy = root.cursorY
+    var near = cx >= left - margin && cx <= right + margin && cy >= top - margin && cy <= bottom + margin
+    if (!near) {
+      root.ghost = false
+      root.claimed = false
+      root.dwellSince = 0
+      return
+    }
+    if (root.claimed) {
+      root.ghost = false
+      return
+    }
+    var inside = cx >= left && cx <= right && cy >= top && cy <= bottom
+    if (inside) {
+      if (root.dwellSince === 0) {
+        root.dwellSince = Date.now()
+      } else if (Date.now() - root.dwellSince > 600) {
+        root.claimed = true
+        root.ghost = false
+        root.play("brows")
+        return
+      }
+    } else {
+      root.dwellSince = 0
+    }
+    root.ghost = true
+  }
+
+  Timer {
+    interval: 120
+    repeat: true
+    running: root.dodge && root.present && root.cursorKnown
+    onTriggered: root.updateGhost()
   }
 
   // ----------------------------------------------------------- animations
@@ -434,6 +596,8 @@ Item {
   }
 
   Component.onCompleted: {
+    root.posRight = root.marginX
+    root.posBottom = root.marginY
     root.latchStartMonitor()
     cursorProc.running = root.helperPath !== ""
     greetAnim.start()
@@ -1012,13 +1176,14 @@ Item {
     exclusionMode: ExclusionMode.Ignore
     WlrLayershell.namespace: "jankeesvw-clippy"
     WlrLayershell.layer: WlrLayer.Top
-    WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
+    // No keyboard at all until you click him; see claimKeys().
+    WlrLayershell.keyboardFocus: root.keysWanted ? WlrKeyboardFocus.Exclusive : WlrKeyboardFocus.None
 
     mask: Region {
       x: stage.x
       y: stage.y
-      width: root.present ? stage.width : 0
-      height: root.present ? stage.height : 0
+      width: root.present && !root.ghost ? stage.width : 0
+      height: root.present && !root.ghost ? stage.height : 0
 
       Region {
         intersection: Intersection.Combine
@@ -1034,10 +1199,8 @@ Item {
       id: stage
       width: Math.ceil(104 * root.artScale) + root.px(12)
       height: Math.ceil(168 * root.artScale) + root.px(34)
-      anchors.right: parent.right
-      anchors.bottom: parent.bottom
-      anchors.rightMargin: root.marginX
-      anchors.bottomMargin: root.marginY
+      x: Math.max(0, Math.min(win.width - width, win.width - width - root.posRight))
+      y: Math.max(0, Math.min(win.height - height, win.height - height - root.posBottom))
 
       // A soft shadow where he stands. It stays on the ground while he hops
       // and rides along with the bicycle.
@@ -1050,7 +1213,7 @@ Item {
         radius: height / 2
         color: "#000000"
         visible: root.present || byeAnim.running
-        opacity: 0.22 * (1 - Math.min(1, -lift.y / root.px(40)))
+        opacity: (root.ghost ? 0.06 : 0.22) * (1 - Math.min(1, -lift.y / root.px(40)))
       }
 
       Item {
@@ -1060,6 +1223,8 @@ Item {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         visible: root.present || byeAnim.running
+        opacity: root.ghost ? 0.25 : 1
+        Behavior on opacity { NumberAnimation { duration: 180; easing.type: Easing.OutQuad } }
 
         transform: [
           Scale { id: breathe; origin.x: body.width / 2; origin.y: body.height * 0.9 },
@@ -1093,6 +1258,16 @@ Item {
               border.width: 2.5
               opacity: root.ripple > 0 && root.ripple < 1 ? (1 - t) * 0.8 : 0
             }
+          }
+
+          // Shows that he has the keyboard: a rim of accent colour around the
+          // wire itself, so it bends along with whatever shape he is in.
+          Shape {
+            anchors.fill: parent
+            preferredRendererType: Shape.CurveRenderer
+            opacity: root.selected && !root.dragging ? 1 : 0
+            Behavior on opacity { NumberAnimation { duration: 160 } }
+            WirePath { strokeColor: Color.accent; strokeWidth: 13 }
           }
 
           Shape {
@@ -1212,16 +1387,87 @@ Item {
         }
       }
 
+      // Click for a tip, drag to move him. Super+drag grabs him straight
+      // away, the way it grabs a window.
       MouseArea {
+        id: grab
         anchors.fill: parent
         enabled: root.present
         hoverEnabled: true
         acceptedButtons: Qt.LeftButton | Qt.RightButton
-        cursorShape: Qt.PointingHandCursor
+        cursorShape: root.dragging ? Qt.ClosedHandCursor : Qt.PointingHandCursor
+
+        property real startX: 0
+        property real startY: 0
+        property real lastX: 0
+        property int startRight: 0
+        property int startBottom: 0
+        property bool moved: false
+
         onContainsMouseChanged: root.hovered = containsMouse
+        onPressed: function(mouse) {
+          var p = mapToItem(null, mouse.x, mouse.y)
+          startX = p.x
+          startY = p.y
+          lastX = p.x
+          startRight = root.posRight
+          startBottom = root.posBottom
+          moved = false
+          root.claimKeys()
+          if (mouse.button === Qt.LeftButton && (mouse.modifiers & Qt.MetaModifier)) root.beginDrag()
+        }
+        onPositionChanged: function(mouse) {
+          if (!pressed || !(pressedButtons & Qt.LeftButton)) return
+          var p = mapToItem(null, mouse.x, mouse.y)
+          var dx = p.x - startX, dy = p.y - startY
+          if (!root.dragging && Math.abs(dx) + Math.abs(dy) > root.px(6)) root.beginDrag()
+          if (!root.dragging) return
+          root.moveTo(startRight - dx, startBottom - dy)
+          // Swing a little in the direction he is carried.
+          shake.angle = Math.max(-20, Math.min(20, shake.angle * 0.7 + (p.x - lastX) * 0.9))
+          lastX = p.x
+        }
+        onReleased: if (root.dragging) root.endDrag()
+        onCanceled: if (root.dragging) root.endDrag()
         onClicked: function(mouse) {
+          if (moved) return
           if (mouse.button === Qt.RightButton) root.askGoodbye()
           else root.showTip(root.tipReaction())
+        }
+      }
+
+      Item {
+        id: keyTarget
+        focus: true
+        Keys.onPressed: function(event) {
+          if (!root.keysWanted) return
+          keyRelease.restart()
+          var step = (event.modifiers & Qt.ShiftModifier) ? root.px(80) : root.px(16)
+          switch (event.key) {
+          case Qt.Key_Escape:
+            if (root.bubbleOpen) root.closeBubble()
+            else root.deselect()
+            break
+          case Qt.Key_W:
+          case Qt.Key_Delete:
+          case Qt.Key_Backspace:
+            root.deselect()
+            root.goAway()
+            break
+          case Qt.Key_Return:
+          case Qt.Key_Enter:
+          case Qt.Key_Space:
+          case Qt.Key_T:
+            root.showTip(root.tipReaction())
+            break
+          case Qt.Key_Left: root.nudge(-step, 0); break
+          case Qt.Key_Right: root.nudge(step, 0); break
+          case Qt.Key_Up: root.nudge(0, -step); break
+          case Qt.Key_Down: root.nudge(0, step); break
+          default:
+            return
+          }
+          event.accepted = true
         }
       }
     }
@@ -1235,7 +1481,9 @@ Item {
       width: root.px(300)
       height: bubbleColumn.implicitHeight + pad * 2
       x: Math.max(root.px(8), Math.min(stage.x + stage.width - width + root.px(6), win.width - width - root.px(8)))
-      y: stage.y + root.px(22) - height - tail.height
+      // Above him, unless he has been dragged too close to the top.
+      readonly property bool below: stage.y + root.px(22) - height - tail.height < root.px(8)
+      y: below ? stage.y + stage.height + tail.height - root.px(4) : stage.y + root.px(22) - height - tail.height
 
       color: root.paper
       border.color: root.ink
@@ -1245,7 +1493,7 @@ Item {
       opacity: root.bubbleOpen ? 1 : 0
       visible: opacity > 0.01
       scale: root.bubbleOpen ? 1 : 0.92
-      transformOrigin: Item.BottomRight
+      transformOrigin: below ? Item.TopRight : Item.BottomRight
       Behavior on opacity { NumberAnimation { duration: 160 } }
       Behavior on scale { NumberAnimation { duration: 240; easing.type: Easing.OutBack } }
 
@@ -1264,7 +1512,8 @@ Item {
         height: root.px(14)
         x: Math.max(bubble.radius, Math.min(bubble.width - bubble.radius - width,
                     stage.x + stage.width / 2 - bubble.x - width / 2 - root.px(4)))
-        y: bubble.height - bubble.border.width
+        y: bubble.below ? -height + bubble.border.width : bubble.height - bubble.border.width
+        rotation: bubble.below ? 180 : 0
         preferredRendererType: Shape.CurveRenderer
 
         ShapePath {
@@ -1280,7 +1529,7 @@ Item {
 
       Rectangle {
         x: tail.x + bubble.border.width
-        y: bubble.height - bubble.border.width * 2
+        y: bubble.below ? 0 : bubble.height - bubble.border.width * 2
         width: tail.width - bubble.border.width * 2
         height: bubble.border.width * 2
         color: root.paper

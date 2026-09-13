@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "jankeesvw.clippy",
   "name": "Clippy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Jankees van Woezik",
   "license": "MIT",
   "description": "A paperclip in the corner of your screen that watches your mouse and hands out tips from the Omarchy manual.",

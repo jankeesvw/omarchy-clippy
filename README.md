@@ -20,6 +20,8 @@ Omarchy 4 (Quattro) on Hyprland. Clippy uses only what Omarchy already ships: th
 | --- | --- |
 | Start the shell | rides in on a bicycle made of himself, his eyes as the wheels |
 | Move the mouse | follows it with his eyes, even from the other side of the screen |
+| Move the mouse near him | turns see-through and lets your clicks pass to whatever is behind him; rest the pointer on him for a moment and he is solid again |
+| Drag him, or Super + drag | picks him up and puts him wherever you drop him; the spot is remembered |
 | Left-click him | shows a tip from the manual, with a different reaction each time |
 | Right-click him | curls up and asks whether you want him to go away |
 | Open manual | turns into a check mark and opens the page on omarchy.org |
@@ -53,7 +55,16 @@ Like the Office Assistant, the big animations are reactions to what you do: ever
 
 ## Keyboard and IPC
 
-Clippy never takes keyboard focus, so everything he does is also reachable over IPC. Bind any of these to a key:
+Clippy takes the keyboard only when you click him, and shows an outline while he has it:
+
+| Key | He |
+| --- | --- |
+| `W`, `Delete` or `Backspace` | rides off, the way Super + W closes a window |
+| `Enter`, `Space` or `T` | shows a tip |
+| Arrow keys | moves over a little, with Shift a lot |
+| `Escape` | closes the bubble, and a second time hands the keyboard back |
+
+Super + W itself belongs to Hyprland and never reaches a layer surface, which is why he answers to plain `W`. Everything he does is also reachable over IPC. Bind any of these to a key:
 
 ```bash
 omarchy-shell jankeesvw.clippy tip      # show a tip now
@@ -79,13 +90,14 @@ Add any of these to the `jankeesvw.clippy` entry in the `plugins` array of `~/.c
   "id": "jankeesvw.clippy",
   "intervalMinutes": 20,
   "greeting": true,
+  "dodge": true,
   "monitor": "DP-1",
   "marginX": 24,
   "marginY": 24
 }
 ```
 
-`intervalMinutes` is how often he offers a tip unprompted; `0` means only when you click him. `monitor` is an output name from `hyprctl monitors`; without it he stays on the monitor that had focus when the shell started.
+`intervalMinutes` is how often he offers a tip unprompted; `0` means only when you click him. `dodge` turns the see-through behaviour off when set to `false`. `marginX` and `marginY` are his distance from the bottom-right corner, and are what dragging him writes back. `monitor` is an output name from `hyprctl monitors`; without it he stays on the monitor that had focus when the shell started.
 
 ## How it works
 
@@ -99,7 +111,7 @@ A layer surface only receives pointer positions while the pointer is over it, so
 
 ## Privacy
 
-The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyprland's socket and hands it to the shell over a pipe, and nothing is logged or stored. Clippy writes no files. The only network access is the manual page you open with the Open manual button, in your browser.
+The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyprland's socket and hands it to the shell over a pipe, and nothing is logged or stored. Clippy writes no files of his own: the only thing he saves is where you dragged him, as `marginX` and `marginY` on his own entry in `~/.config/omarchy/shell.json`, through the shell's settings API. The only network access is the manual page you open with the Open manual button, in your browser.
 
 ## Removing
 
