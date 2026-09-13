@@ -241,7 +241,7 @@ Item {
   // that broke. Control characters go, the length is capped, and the text is
   // escaped like a tip, so `code` is the only markup that survives.
   function plainLine(value, max) {
-    return String(value || "").replace(/[ --]+/g, " ").trim().slice(0, max)
+    return String(value || "").replace(/[\u0000-\u001f\u007f-\u009f]+/g, " ").trim().slice(0, max)
   }
 
   property var agentLinks: []
@@ -253,7 +253,7 @@ Item {
   function safeUrl(value) {
     var url = String(value || "")
     if (url.length === 0 || url.length > 2048) return ""
-    if (/[\s --<>"'`\\]/.test(url) || url.indexOf("--private") >= 0) return ""
+    if (/[\s\u0000-\u001f\u007f-\u009f<>"'`\\]/.test(url) || url.indexOf("--private") >= 0) return ""
     var match = /^(https?):\/\/([^\/?#]*)/i.exec(url)
     if (!match || match[2].indexOf("@") >= 0) return ""
     var host = match[2].replace(/:\d{1,5}$/, "").toLowerCase()
