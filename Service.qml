@@ -30,9 +30,47 @@ Item {
 
   // ------------------------------------------------------------- settings
 
+  // Plugins installed by the user are handed a PluginShellApi, which has no
+  // shellConfig, so `shell.shellConfig` is undefined inside a third-party
+  // plugin and every setting in shell.json was silently ignored. Read the
+  // user's shell.json directly instead. If the shell ever passes a real
+  // shellConfig to third-party plugins, `setting()` prefers it.
+  readonly property string userConfigPath: {
+    var home = Quickshell.env("HOME") || ""
+    var xdg = Quickshell.env("XDG_CONFIG_HOME")
+    var base = (xdg && xdg.length > 0) ? xdg : home + "/.config"
+    return base + "/omarchy/shell.json"
+  }
+
+  // Settings are resolved once, at startup, so a blocking read is enough.
+  FileView {
+    id: userConfig
+    path: root.userConfigPath
+    blockLoading: true
+    printErrors: false
+  }
+
+  function pluginsConfig() {
+    try {
+      var parsed = JSON.parse(userConfig.text() || "")
+      if (parsed && Array.isArray(parsed.plugins)) return parsed.plugins
+    } catch (e) {
+      console.warn("clippy: could not read shell.json:", e)
+    }
+    return []
+  }
+
+  // Clippy's own entry in shell.json.
+  function ownEntry() {
+    var list = root.pluginsConfig()
+    for (var i = 0; i < list.length; i++)
+      if (list[i] && String(list[i].id || "") === root.pluginId) return list[i]
+    return ({})
+  }
+
   function setting(key, fallback) {
-    var cfg = shell ? shell.shellConfig : null
-    var list = cfg && Array.isArray(cfg.plugins) ? cfg.plugins : []
+    var scoped = root.shell ? root.shell.shellConfig : null
+    var list = (scoped && Array.isArray(scoped.plugins)) ? scoped.plugins : root.pluginsConfig()
     for (var i = 0; i < list.length; i++) {
       var entry = list[i]
       if (entry && String(entry.id || "") === root.pluginId && entry[key] !== undefined)
@@ -447,17 +485,14 @@ Item {
   }
 
   // The position lives on our own plugins[] entry in shell.json, merged with
-  // whatever other settings the entry already carries.
+  // whatever other settings the entry already carries. Reading the entry from
+  // the file (rather than from the shell API) is what keeps the other settings
+  // from being dropped when the position is written back.
   function savePosition() {
     if (!root.shell || typeof root.shell.updateEntryInline !== "function") return
     var settings = {}
-    var cfg = root.shell.shellConfig
-    var list = cfg && Array.isArray(cfg.plugins) ? cfg.plugins : []
-    for (var i = 0; i < list.length; i++) {
-      var entry = list[i]
-      if (entry && String(entry.id || "") === root.pluginId)
-        for (var key in entry) if (key !== "id") settings[key] = entry[key]
-    }
+    var entry = root.ownEntry()
+    for (var key in entry) if (key !== "id") settings[key] = entry[key]
     settings.marginX = root.posRight
     settings.marginY = root.posBottom
     root.shell.updateEntryInline(root.pluginId, settings)
