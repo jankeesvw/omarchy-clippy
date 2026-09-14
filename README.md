@@ -25,7 +25,7 @@ Omarchy 4 (Quattro) on Hyprland. Clippy uses only what Omarchy already ships: th
 | Left-click him | shows a tip from the manual, with a different reaction each time |
 | Right-click him | curls up and asks whether you want him to go away |
 | Open manual | turns into a check mark and opens the page on omarchy.org |
-| Next tip | reacts (points, scratches his head, puts on his glasses, turns into an atom, ...) and shows another one; every tip comes once before any repeats |
+| Next tip | reacts (points, scratches his head, puts on his glasses, turns into an atom, ...) and shows another one; every tip comes once before any repeats, and hardly ever two from the same manual page in a row |
 | Ride off | folds into the bicycle and rides off the edge of the screen |
 | Leave the mouse alone for two minutes | collapses into a pile of wire and snores until you move it |
 

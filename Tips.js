@@ -6,2436 +6,2842 @@ var tips = [
   "page": "Getting Started",
   "section": "Installing for another owner",
   "url": "https://omarchy.org/manual/getting-started/",
-  "text": "Hit `Ctrl + C` on the very first screen of the installer (the keyboard selection), and Omarchy will offer to prepare the machine for another owner instead."
+  "text": "Hit `Ctrl + C` on the very first screen of the installer (the keyboard selection), and Omarchy will offer to prepare the machine for another owner instead.",
+  "title": "Setting it up for someone else?"
  },
  {
   "page": "Getting Started",
   "section": "No-encryption installations",
   "url": "https://omarchy.org/manual/getting-started/",
-  "text": "You can hit `Ctrl + C` on the disk formatting confirmation to switch to an encryption-less installation."
+  "text": "You can hit `Ctrl + C` on the disk formatting confirmation to switch to an encryption-less installation.",
+  "title": "Skipping disk encryption"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Super is the center of everything",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Your Spotlight or Raycast or Start-menu reflex becomes `Super + Space`."
+  "text": "Your Spotlight or Raycast or Start-menu reflex becomes `Super + Space`.",
+  "title": "Where did Spotlight go?"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "There's no dock and no desktop icons",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Apps start from a hotkey (`Super + Return` for the terminal, `Super + Shift + Return` for the browser, and `Super + K` for a list of everything that's mapped) or from the menu."
+  "text": "Apps start from a hotkey (`Super + Return` for the terminal, `Super + Shift + Return` for the browser, and `Super + K` for a list of everything that's mapped) or from the menu.",
+  "title": "Missing your dock?"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Windows place themselves",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "When you genuinely need a floating window, `Super + T` toggles the active one out of the tiling (and back)."
+  "text": "When you genuinely need a floating window, `Super + T` toggles the active one out of the tiling (and back).",
+  "title": "Need a floating window?"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Windows place themselves",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Workspaces will feel familiar: they're macOS Spaces or Windows virtual desktops, except you'll actually use them, because `Super + 1/2/3/4` jumps straight to one and `Super + Shift + 1/2/3/4` sends the active window there."
+  "text": "Workspaces will feel familiar: they're macOS Spaces or Windows virtual desktops, except you'll actually use them, because `Super + 1/2/3/4` jumps straight to one and `Super + Shift + 1/2/3/4` sends the active window there.",
+  "title": "Spaces, but better"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Copy and paste just work",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Omarchy gives you `Super + C`, `Super + X`, and `Super + V`, and they work everywhere, including the terminal."
+  "text": "Omarchy gives you `Super + C`, `Super + X`, and `Super + V`, and they work everywhere, including the terminal.",
+  "title": "Copy and paste, everywhere"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Copy and paste just work",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Windows folks: your Win + V clipboard history lives on `Super + Ctrl + V`, and it holds images as well as text."
+  "text": "Windows folks: your Win + V clipboard history lives on `Super + Ctrl + V`, and it holds images as well as text.",
+  "title": "Looking for Win + V?"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Some things really are different",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "`Super + W`, or `Super + Q`, if that's the finger memory you arrived with, means gone."
+  "text": "`Super + W`, or `Super + Q`, if that's the finger memory you arrived with, means gone.",
+  "title": "Closing time!"
  },
  {
   "page": "Coming From Mac or Windows",
   "section": "Give it two weeks",
   "url": "https://omarchy.org/manual/coming-from-mac-or-windows/",
-  "text": "Skim the hotkeys chapter once, and whenever you blank on a binding, hit `Super + K`, it shows you all of them."
+  "text": "Skim the hotkeys chapter once, and whenever you blank on a binding, hit `Super + K`, it shows you all of them.",
+  "title": "Forgot a shortcut?"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You start the terminal with `Super + Return` and a browser with `Super + Shift + Return`."
+  "text": "You start the terminal with `Super + Return` and a browser with `Super + Shift + Return`.",
+  "title": "Terminal or browser?"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "Hit `Super + J` again to return them to their side-by-side positions."
+  "text": "Hit `Super + J` again to return them to their side-by-side positions.",
+  "title": "Side by side again"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You can tile it using `Super + T` (and hit that again to make it floating again)."
+  "text": "You can tile it using `Super + T` (and hit that again to make it floating again).",
+  "title": "Back into the grid"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You navigate between the window you want to be active with `Super + Arrow`."
+  "text": "You navigate between the window you want to be active with `Super + Arrow`.",
+  "title": "Hop between windows"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "If you hit `Super + Shift + 2`, you'll move the current focused application onto the second workspace."
+  "text": "If you hit `Super + Shift + 2`, you'll move the current focused application onto the second workspace.",
+  "title": "Pack it off to workspace 2"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "(And `Super + Shift + Alt + 2` will move the current focused application onto the second workspace without switching to it)."
+  "text": "(And `Super + Shift + Alt + 2` will move the current focused application onto the second workspace without switching to it).",
+  "title": "Send it away, stay put"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "If you hold down `Super` and use the mouse to click on a window, you'll be able to rearrange where it sits."
+  "text": "If you hold down `Super` and use the mouse to click on a window, you'll be able to rearrange where it sits.",
+  "title": "Rearrange with the mouse"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "If you hold `Super` and use the right button on the mouse, you can freely resize the window."
+  "text": "If you hold `Super` and use the right button on the mouse, you can freely resize the window.",
+  "title": "Resize without the corners"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You close a window on `Super + W` or `Super + Q` (and close all windows on `Ctrl + Alt + Delete`)."
+  "text": "You close a window on `Super + W` or `Super + Q` (and close all windows on `Ctrl + Alt + Delete`).",
+  "title": "Close one, or close them all"
  },
  {
   "page": "Navigation",
   "section": "",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You can also go full screen with `Super + F` or even just full-width (keeping the top bar) with `Super + Alt + F` or full-screen within a window with `Super + Ctrl + F` (good for YouTube!)."
+  "text": "You can also go full screen with `Super + F` or even just full-width (keeping the top bar) with `Super + Alt + F` or full-screen within a window with `Super + Ctrl + F` (good for YouTube!).",
+  "title": "Three kinds of full screen"
  },
  {
   "page": "Navigation",
   "section": "Dwindle vs scrolling layout",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You turn a single workspace into this layout via `Super + L`."
+  "text": "You turn a single workspace into this layout via `Super + L`.",
+  "title": "Try the scrolling layout"
  },
  {
   "page": "Navigation",
   "section": "Grouping windows",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "Windows can be grouped using `Super + G`."
+  "text": "Windows can be grouped using `Super + G`.",
+  "title": "Stack windows together"
  },
  {
   "page": "Navigation",
   "section": "Grouping windows",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You can move between these grouped windows using `Super + Ctrl + Arrow Left/Right` or `Super + Alt + 1/2/3/4` to go directly to grouped window in order."
+  "text": "You can move between these grouped windows using `Super + Ctrl + Arrow Left/Right` or `Super + Alt + 1/2/3/4` to go directly to grouped window in order.",
+  "title": "Flip through a group"
  },
  {
   "page": "Navigation",
   "section": "Grouping windows",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You can move a window out of the grouping with `Super + Alt + G` or disassemble the entire group by hitting `Super + G` again."
+  "text": "You can move a window out of the grouping with `Super + Alt + G` or disassemble the entire group by hitting `Super + G` again.",
+  "title": "Break up the group"
  },
  {
   "page": "Navigation",
   "section": "Grouping windows",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "Finally, you can move windows outside the group into it with `Super + Alt + Arrows`."
+  "text": "Finally, you can move windows outside the group into it with `Super + Alt + Arrows`.",
+  "title": "Join the group!"
  },
  {
   "page": "Navigation",
   "section": "Popping windows",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "You can pop a window out of its workspace allocation with `Super + O`."
+  "text": "You can pop a window out of its workspace allocation with `Super + O`.",
+  "title": "Pop it out"
  },
  {
   "page": "Navigation",
   "section": "Scratchpad workspace",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "Toggle it with `Super + Grave` or `Super + S`, and place a window there using `Super + Shift + Grave` or `Super + Alt + S`."
+  "text": "Toggle it with `Super + Grave` or `Super + S`, and place a window there using `Super + Shift + Grave` or `Super + Alt + S`.",
+  "title": "A secret stash workspace"
  },
  {
   "page": "Navigation",
   "section": "Scratchpad workspace",
   "url": "https://omarchy.org/manual/navigation/",
-  "text": "To move a window off the scratchpad, send it directly to another workspace with something like `Super + Shift + 1`."
+  "text": "To move a window off the scratchpad, send it directly to another workspace with something like `Super + Shift + 1`.",
+  "title": "Out of the scratchpad"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Menu widget in the bar: omarchy menu."
+  "text": "Click the Menu widget in the bar: omarchy menu.",
+  "title": "The menu is one click away"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Menu widget in the bar: new terminal."
+  "text": "Right-click the Menu widget in the bar: new terminal.",
+  "title": "A terminal from the menu button"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Workspaces widget in the bar: focus that workspace."
+  "text": "Click the Workspaces widget in the bar: focus that workspace.",
+  "title": "Click a workspace"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Clock widget in the bar: calendar popup."
+  "text": "Click the Clock widget in the bar: calendar popup.",
+  "title": "What day is it again?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Clock widget in the bar: cycle the label format."
+  "text": "Right-click the Clock widget in the bar: cycle the label format.",
+  "title": "Change how the clock looks"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Clock widget in the bar: timezone picker."
+  "text": "Middle-click the Clock widget in the bar: timezone picker.",
+  "title": "What time is it over there?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Weather widget in the bar: forecast popup."
+  "text": "Click the Weather widget in the bar: forecast popup.",
+  "title": "Need an umbrella?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Weather widget in the bar: full weather as a notification."
+  "text": "Right-click the Weather widget in the bar: full weather as a notification.",
+  "title": "The full forecast"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Weather widget in the bar: refresh."
+  "text": "Middle-click the Weather widget in the bar: refresh.",
+  "title": "Fresh weather, please"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Audio widget in the bar: audio panel."
+  "text": "Click the Audio widget in the bar: audio panel.",
+  "title": "Sound settings in the bar"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Audio widget in the bar: mute."
+  "text": "Right-click the Audio widget in the bar: mute.",
+  "title": "Shh! Mute in one click"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Audio widget in the bar: panel."
+  "text": "Middle-click the Audio widget in the bar: panel.",
+  "title": "Another way to the audio panel"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Scroll on the Audio widget in the bar: volume."
+  "text": "Scroll on the Audio widget in the bar: volume.",
+  "title": "Scroll for volume"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Microphone widget in the bar: mute the mic."
+  "text": "Click the Microphone widget in the bar: mute the mic.",
+  "title": "Mic off in one click"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Microphone widget in the bar: audio panel."
+  "text": "Middle-click the Microphone widget in the bar: audio panel.",
+  "title": "Audio panel from the mic"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Scroll on the Microphone widget in the bar: input volume."
+  "text": "Scroll on the Microphone widget in the bar: input volume.",
+  "title": "Turn your mic up or down"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Network widget in the bar: network panel."
+  "text": "Click the Network widget in the bar: network panel.",
+  "title": "Check your connection"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Bluetooth widget in the bar: bluetooth panel."
+  "text": "Click the Bluetooth widget in the bar: bluetooth panel.",
+  "title": "Bluetooth in the bar"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Bluetooth widget in the bar: toggle the radio."
+  "text": "Right-click the Bluetooth widget in the bar: toggle the radio.",
+  "title": "Bluetooth on or off"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Display widget in the bar: display panel."
+  "text": "Click the Display widget in the bar: display panel.",
+  "title": "Display settings in the bar"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Scroll on the Display widget in the bar: brightness."
+  "text": "Scroll on the Display widget in the bar: brightness.",
+  "title": "Scroll for brightness"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Power widget in the bar: power panel."
+  "text": "Click the Power widget in the bar: power panel.",
+  "title": "Power panel in the bar"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Power widget in the bar: toggle the battery percentage."
+  "text": "Right-click the Power widget in the bar: toggle the battery percentage.",
+  "title": "How full is your battery?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Media widget in the bar: play/pause."
+  "text": "Click the Media widget in the bar: play/pause.",
+  "title": "Pause the music"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Media widget in the bar: cover-art popup."
+  "text": "Right-click the Media widget in the bar: cover-art popup.",
+  "title": "Show me the album cover"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Media widget in the bar: next."
+  "text": "Middle-click the Media widget in the bar: next.",
+  "title": "Skip this song"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Scroll on the Media widget in the bar: prev/next."
+  "text": "Scroll on the Media widget in the bar: prev/next.",
+  "title": "Scroll through tracks"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Agents widget in the bar: agents panel."
+  "text": "Click the Agents widget in the bar: agents panel.",
+  "title": "What are your agents up to?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Agents widget in the bar: launch your agent."
+  "text": "Right-click the Agents widget in the bar: launch your agent.",
+  "title": "Start an agent from the bar"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Middle-click the Agents widget in the bar: next subscription."
+  "text": "Middle-click the Agents widget in the bar: next subscription.",
+  "title": "Switch subscriptions"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Tray widget in the bar: hover to reveal the drawer."
+  "text": "Click the Tray widget in the bar: hover to reveal the drawer.",
+  "title": "Where did my tray icons go?"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Right-click the Tray widget in the bar: right on the chevron to manage."
+  "text": "Right-click the Tray widget in the bar: right on the chevron to manage.",
+  "title": "Manage the tray"
  },
  {
   "page": "The Top Bar",
   "section": "Clicking around",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "Click the Omarchy update widget in the bar: run the update."
+  "text": "Click the Omarchy update widget in the bar: run the update.",
+  "title": "An update is waiting"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + A`: Audio"
+  "text": "`Super + Ctrl + A`: Audio",
+  "title": "Audio at your fingertips"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + W`: Network"
+  "text": "`Super + Ctrl + W`: Network",
+  "title": "Network at your fingertips"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + B`: Bluetooth"
+  "text": "`Super + Ctrl + B`: Bluetooth",
+  "title": "Bluetooth at your fingertips"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + D`: Display"
+  "text": "`Super + Ctrl + D`: Display",
+  "title": "Display at your fingertips"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + P`: Power"
+  "text": "`Super + Ctrl + P`: Power",
+  "title": "Power at your fingertips"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + Alt + D`: Calendar"
+  "text": "`Super + Ctrl + Alt + D`: Calendar",
+  "title": "Your calendar, instantly"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + 1-9`: Toggle the nth panel in the right section"
+  "text": "`Super + Ctrl + 1-9`: Toggle the nth panel in the right section",
+  "title": "Panels by number"
  },
  {
   "page": "The Top Bar",
   "section": "The panels",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Ctrl + 1-9` counts panels left to right in the right section, skipping the tray since it has no panel of its own."
+  "text": "`Super + Ctrl + 1-9` counts panels left to right in the right section, skipping the tray since it has no panel of its own.",
+  "title": "Counting panels"
  },
  {
   "page": "The Top Bar",
   "section": "Hiding the bar",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`Super + Shift + Space` toggles the bar off and back on without killing the shell, panels and hotkeys keep working, you just get the pixels back."
+  "text": "`Super + Shift + Space` toggles the bar off and back on without killing the shell, panels and hotkeys keep working, you just get the pixels back.",
+  "title": "Hide the bar"
  },
  {
   "page": "The Top Bar",
   "section": "The config file",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "The moment you drag a widget, run `omarchy bar`, or edit the file yourself, you own it, there's no deep merge, so new default widgets in future Omarchy releases won't appear on your bar automatically."
+  "text": "The moment you drag a widget, run `omarchy bar`, or edit the file yourself, you own it, there's no deep merge, so new default widgets in future Omarchy releases won't appear on your bar automatically.",
+  "title": "Your bar, your rules"
  },
  {
   "page": "The Top Bar",
   "section": "The config file",
   "url": "https://omarchy.org/manual/the-top-bar/",
-  "text": "`omarchy bar defaults` puts the shipped layout back whenever you want a clean slate."
+  "text": "`omarchy bar defaults` puts the shipped layout back whenever you want a clean slate.",
+  "title": "Start the bar over"
  },
  {
   "page": "Themes",
   "section": "",
   "url": "https://omarchy.org/manual/themes/",
-  "text": "You can select between them via Style > Theme in the Omarchy Menu (`Super + Space`) or hop directly to the theme selector using `Super + Ctrl + Shift + Space`."
+  "text": "You can select between them via Style > Theme in the Omarchy Menu (`Super + Space`) or hop directly to the theme selector using `Super + Ctrl + Shift + Space`.",
+  "title": "Time for a new look?"
  },
  {
   "page": "Themes",
   "section": "",
   "url": "https://omarchy.org/manual/themes/",
-  "text": "Themes have a set of background images that you can pick between using `Super + Ctrl + Space`."
+  "text": "Themes have a set of background images that you can pick between using `Super + Ctrl + Space`.",
+  "title": "New wallpaper?"
  },
  {
   "page": "Hotkeys",
   "section": "",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "You can see all the main keyboard bindings with `Super + K` (Tmux bindings with `Super + Alt + K` and Herdr bindings with `Super + Ctrl + K`)."
+  "text": "You can see all the main keyboard bindings with `Super + K` (Tmux bindings with `Super + Alt + K` and Herdr bindings with `Super + Ctrl + K`).",
+  "title": "All the shortcuts in one place"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Space`: Omarchy menu (apps and everything else)"
+  "text": "`Super + Space`: Omarchy menu (apps and everything else)",
+  "title": "The one shortcut to rule them all"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Space`: Apps menu"
+  "text": "`Super + Alt + Space`: Apps menu",
+  "title": "Just the apps"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Escape`: System menu (suspend, restart, etc)"
+  "text": "`Super + Escape`: System menu (suspend, restart, etc)",
+  "title": "Suspend, restart, shut down"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + L`: Lock computer"
+  "text": "`Super + Ctrl + L`: Lock computer",
+  "title": "Stepping away?"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + W` or `Super + Q`: Close window"
+  "text": "`Super + W` or `Super + Q`: Close window",
+  "title": "Close that window"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Del`: Close all windows"
+  "text": "`Ctrl + Alt + Del`: Close all windows",
+  "title": "Close everything at once"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + T`: Toggle window between tiling/floating"
+  "text": "`Super + T`: Toggle window between tiling/floating",
+  "title": "Float or tile?"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + J`: Toggle window position (horizontal/vertical)"
+  "text": "`Super + J`: Toggle window position (horizontal/vertical)",
+  "title": "Flip the split"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + O`: Toggle popping window into sticky'n'floating"
+  "text": "`Super + O`: Toggle popping window into sticky'n'floating",
+  "title": "Make it sticky"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + L`: Toggle between dwindle and scrolling layout"
+  "text": "`Super + L`: Toggle between dwindle and scrolling layout",
+  "title": "Switch the layout"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + P`: Toggle pseudo window style (natural v stretch)"
+  "text": "`Super + P`: Toggle pseudo window style (natural v stretch)",
+  "title": "Natural or stretched?"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + F`: Go full screen"
+  "text": "`Super + F`: Go full screen",
+  "title": "Go full screen"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + F`: Go full width"
+  "text": "`Super + Alt + F`: Go full width",
+  "title": "Full width, bar stays"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + F`: Go full screen inside window"
+  "text": "`Super + Ctrl + F`: Go full screen inside window",
+  "title": "Full screen in a window"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + 1/2/3/4`: Jump to specific workspace"
+  "text": "`Super + 1/2/3/4`: Jump to specific workspace",
+  "title": "Jump to a workspace"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Tab`: Jump to next workspace"
+  "text": "`Super + Tab`: Jump to next workspace",
+  "title": "Next workspace, please"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Tab`: Jump to previous workspace"
+  "text": "`Super + Shift + Tab`: Jump to previous workspace",
+  "title": "Back one workspace"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Tab`: Jump to former workspace"
+  "text": "`Super + Ctrl + Tab`: Jump to former workspace",
+  "title": "Where was I again?"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + 1/2/3/4`: Move window to workspace"
+  "text": "`Super + Shift + 1/2/3/4`: Move window to workspace",
+  "title": "Move a window over"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + 1/2/3/4`: Move window to workspace without following"
+  "text": "`Super + Shift + Alt + 1/2/3/4`: Move window to workspace without following",
+  "title": "Move it, but stay here"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + S` / `Super + Grave`: Toggle scratchpad"
+  "text": "`Super + S` / `Super + Grave`: Toggle scratchpad",
+  "title": "Open the scratchpad"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + S` / `Super + Shift + Grave`: Move window to scratchpad"
+  "text": "`Super + Alt + S` / `Super + Shift + Grave`: Move window to scratchpad",
+  "title": "Tuck it away"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + Arrows`: Move workspaces to directional monitor"
+  "text": "`Super + Shift + Alt + Arrows`: Move workspaces to directional monitor",
+  "title": "Send a workspace to another screen"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Arrow`: Move focus to window in direction of arrow"
+  "text": "`Super + Arrow`: Move focus to window in direction of arrow",
+  "title": "Focus with the arrows"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Arrow`: Swap window with another in direction of arrow"
+  "text": "`Super + Shift + Arrow`: Swap window with another in direction of arrow",
+  "title": "Swap two windows"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Minus`: Expand window left"
+  "text": "`Super + Minus`: Expand window left",
+  "title": "Make it wider"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Equal`: Shrink window left"
+  "text": "`Super + Equal`: Shrink window left",
+  "title": "Make it narrower"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Minus`: Shrink window up"
+  "text": "`Super + Shift + Minus`: Shrink window up",
+  "title": "Make it shorter"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Equal`: Expand window down"
+  "text": "`Super + Shift + Equal`: Expand window down",
+  "title": "Make it taller"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Minus/Equal`: Same resizing in smaller steps"
+  "text": "`Super + Alt + Minus/Equal`: Same resizing in smaller steps",
+  "title": "Resize a little"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Minus/Equal`: Same resizing in bigger steps"
+  "text": "`Super + Ctrl + Minus/Equal`: Same resizing in bigger steps",
+  "title": "Resize a lot"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Home`: Save window width"
+  "text": "`Super + Alt + Home`: Save window width",
+  "title": "Remember this width"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Home`: Restore saved window width"
+  "text": "`Super + Home`: Restore saved window width",
+  "title": "Back to your saved width"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Left Mouse`: Drag window around"
+  "text": "`Super + Left Mouse`: Drag window around",
+  "title": "Drag it anywhere"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Right Mouse`: Resize window"
+  "text": "`Super + Right Mouse`: Resize window",
+  "title": "Resize with the mouse"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Scroll Wheel`: Scroll through workspaces"
+  "text": "`Super + Scroll Wheel`: Scroll through workspaces",
+  "title": "Scroll through workspaces"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + G`: Toggle window grouping"
+  "text": "`Super + G`: Toggle window grouping",
+  "title": "Group your windows"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + G`: Move window out of grouping"
+  "text": "`Super + Alt + G`: Move window out of grouping",
+  "title": "Leave the group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Tab`: Cycle between windows in grouping"
+  "text": "`Super + Alt + Tab`: Cycle between windows in grouping",
+  "title": "Cycle through a group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Shift + Tab`: Cycle backward between windows in grouping"
+  "text": "`Super + Alt + Shift + Tab`: Cycle backward between windows in grouping",
+  "title": "Cycle back through a group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + 1/2/3/4/5`: Jump to specific window in grouping"
+  "text": "`Super + Alt + 1/2/3/4/5`: Jump to specific window in grouping",
+  "title": "Pick a window from the group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Arrow`: Move window into grouping in direction of arrow"
+  "text": "`Super + Alt + Arrow`: Move window into grouping in direction of arrow",
+  "title": "Add it to a group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Left/Right`: Move between windows inside a tiling group"
+  "text": "`Super + Ctrl + Left/Right`: Move between windows inside a tiling group",
+  "title": "Move around inside a group"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Z`: Zoom in on screen (repeat for more zoom)"
+  "text": "`Super + Ctrl + Z`: Zoom in on screen (repeat for more zoom)",
+  "title": "Zoom in!"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + Z`: Zoom fully out from screen"
+  "text": "`Super + Ctrl + Alt + Z`: Zoom fully out from screen",
+  "title": "Zoom all the way out"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + /`: Step forward through monitor scaling options"
+  "text": "`Super + /`: Step forward through monitor scaling options",
+  "title": "Bigger on screen"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + /`: Step backward through monitor scaling options"
+  "text": "`Super + Alt + /`: Step backward through monitor scaling options",
+  "title": "Smaller on screen"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Tab`: Cycle forward through windows on the active workspace"
+  "text": "`Alt + Tab`: Cycle forward through windows on the active workspace",
+  "title": "Alt + Tab still works"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + Tab`: Cycle backward through windows on the active workspace"
+  "text": "`Alt + Shift + Tab`: Cycle backward through windows on the active workspace",
+  "title": "Alt + Tab, the other way"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Tab`: Cycle focus forward through monitors"
+  "text": "`Ctrl + Alt + Tab`: Cycle focus forward through monitors",
+  "title": "Hop to the next monitor"
  },
  {
   "page": "Hotkeys",
   "section": "Navigating",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Shift + Tab`: Cycle focus backwards through monitors"
+  "text": "`Ctrl + Alt + Shift + Tab`: Cycle focus backwards through monitors",
+  "title": "Hop back a monitor"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + A`: Audio panel"
+  "text": "`Super + Ctrl + A`: Audio panel",
+  "title": "Open the audio panel"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + B`: Bluetooth panel"
+  "text": "`Super + Ctrl + B`: Bluetooth panel",
+  "title": "Open the Bluetooth panel"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + W`: Wifi/network panel"
+  "text": "`Super + Ctrl + W`: Wifi/network panel",
+  "title": "Open the Wi-Fi panel"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + D`: Display panel"
+  "text": "`Super + Ctrl + D`: Display panel",
+  "title": "Open the display panel"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + P`: Power panel"
+  "text": "`Super + Ctrl + P`: Power panel",
+  "title": "Open the power panel"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + D`: Calendar panel"
+  "text": "`Super + Ctrl + Alt + D`: Calendar panel",
+  "title": "Open the calendar"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + 1-9`: Toggle bar panel by position"
+  "text": "`Super + Ctrl + 1-9`: Toggle bar panel by position",
+  "title": "Panels by position"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + S`: Share menu (via LocalSend)"
+  "text": "`Super + Ctrl + S`: Share menu (via LocalSend)",
+  "title": "Send a file to a nearby device"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + T`: Activity (btop)"
+  "text": "`Super + Ctrl + T`: Activity (btop)",
+  "title": "What's eating your CPU?"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + C`: Capture controls (screenshot/-recording/picker)"
+  "text": "`Super + Ctrl + C`: Capture controls (screenshot/-recording/picker)",
+  "title": "Capture something"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + O`: Toggle menu"
+  "text": "`Super + Ctrl + O`: Toggle menu",
+  "title": "Flip a switch"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + H`: Hardware menu"
+  "text": "`Super + Ctrl + H`: Hardware menu",
+  "title": "Hardware settings"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Q`: Calculator"
+  "text": "`Super + Ctrl + Q`: Calculator",
+  "title": "Need a calculator?"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + E`: Emoji picker"
+  "text": "`Super + Ctrl + E`: Emoji picker",
+  "title": "Emoji time!"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + .`: Transcode media"
+  "text": "`Super + Ctrl + .`: Transcode media",
+  "title": "Shrink a video before sharing"
  },
  {
   "page": "Hotkeys",
   "section": "System controls",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Ctrl + A`: Pick an AI agent"
+  "text": "`Super + Shift + Ctrl + A`: Pick an AI agent",
+  "title": "Choose your AI sidekick"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + Brightness Up`: Maximum screen brightness"
+  "text": "`Shift + Brightness Up`: Maximum screen brightness",
+  "title": "Full brightness!"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + Brightness Down`: Minimum screen brightness"
+  "text": "`Shift + Brightness Down`: Minimum screen brightness",
+  "title": "Dim it all the way"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Brightness Up/Down`: Precise 1% brightness changes"
+  "text": "`Alt + Brightness Up/Down`: Precise 1% brightness changes",
+  "title": "Brightness, just a touch"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Volume Up/Down`: Precise 1% volume changes"
+  "text": "`Alt + Volume Up/Down`: Precise 1% volume changes",
+  "title": "Volume, just a touch"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Play`: Next track"
+  "text": "`Alt + Play`: Next track",
+  "title": "Skip to the next track"
  },
  {
   "page": "Hotkeys",
   "section": "Adjustments",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + Play`: Previous track"
+  "text": "`Alt + Shift + Play`: Previous track",
+  "title": "Play that one again"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Return`: Terminal"
+  "text": "`Super + Return`: Terminal",
+  "title": "Open a terminal"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + Return`: Tmux terminal"
+  "text": "`Super + Alt + Return`: Tmux terminal",
+  "title": "A terminal that remembers"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Return`: Herdr (agent manager)"
+  "text": "`Super + Ctrl + Return`: Herdr (agent manager)",
+  "title": "Wrangle your agents"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Return`: Browser"
+  "text": "`Super + Shift + Return`: Browser",
+  "title": "Open a browser"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + B`: Browser (private/incognito)"
+  "text": "`Super + Shift + Alt + B`: Browser (private/incognito)",
+  "title": "Browsing in secret?"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + F`: File manager"
+  "text": "`Super + Shift + F`: File manager",
+  "title": "Find your files"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + F`: File manager in cwd of terminal"
+  "text": "`Super + Shift + Alt + F`: File manager in cwd of terminal",
+  "title": "Files, right where you are"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + M`: Music (Spotify)"
+  "text": "`Super + Shift + M`: Music (Spotify)",
+  "title": "Music, maestro!"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + M`: Music (cliamp)"
+  "text": "`Super + Shift + Alt + M`: Music (cliamp)",
+  "title": "Music in the terminal"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + /`: Password manager (1password)"
+  "text": "`Super + Shift + /`: Password manager (1password)",
+  "title": "Forgot a password?"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + N`: Editor (Neovim)"
+  "text": "`Super + Shift + N`: Editor (Neovim)",
+  "title": "Time to write some code?"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + C`: Calendar (HEY)"
+  "text": "`Super + Shift + C`: Calendar (HEY)",
+  "title": "What's on your calendar?"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + E`: Email (HEY)"
+  "text": "`Super + Shift + E`: Email (HEY)",
+  "title": "Check your email"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + E`: New email (HEY)"
+  "text": "`Super + Shift + Alt + E`: New email (HEY)",
+  "title": "Write an email"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + A`: AI (ChatGPT)"
+  "text": "`Super + Shift + A`: AI (ChatGPT)",
+  "title": "Ask ChatGPT"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + A`: AI (Grok)"
+  "text": "`Super + Shift + Alt + A`: AI (Grok)",
+  "title": "Ask Grok"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + G`: Messenger (Signal)"
+  "text": "`Super + Shift + G`: Messenger (Signal)",
+  "title": "Send a Signal message"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + P`: Google Photos"
+  "text": "`Super + Shift + P`: Google Photos",
+  "title": "Look at your photos"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + S`: Google Maps"
+  "text": "`Super + Shift + S`: Google Maps",
+  "title": "Where to?"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + G`: Messenger (WhatsApp)"
+  "text": "`Super + Shift + Alt + G`: Messenger (WhatsApp)",
+  "title": "Open WhatsApp"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Ctrl + G`: Messenger (Google)"
+  "text": "`Super + Shift + Ctrl + G`: Messenger (Google)",
+  "title": "Open Google Messages"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + D`: Docker (LazyDocker)"
+  "text": "`Super + Shift + D`: Docker (LazyDocker)",
+  "title": "Keep an eye on your containers"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + O`: Obsidian"
+  "text": "`Super + Shift + O`: Obsidian",
+  "title": "Jot down a note"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + W`: Writing (Omawrite)"
+  "text": "`Super + Shift + W`: Writing (Omawrite)",
+  "title": "Time to write"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + X`: X"
+  "text": "`Super + Shift + X`: X",
+  "title": "Open X"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + X`: X Compose"
+  "text": "`Super + Shift + Alt + X`: X Compose",
+  "title": "Post something on X"
  },
  {
   "page": "Hotkeys",
   "section": "Launching apps",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Y`: YouTube"
+  "text": "`Super + Shift + Y`: YouTube",
+  "title": "Watch a video"
  },
  {
   "page": "Hotkeys",
   "section": "Universal clipboard",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + X`: Cut (not in terminal)"
+  "text": "`Super + X`: Cut (not in terminal)",
+  "title": "Cut, not copy"
  },
  {
   "page": "Hotkeys",
   "section": "Universal clipboard",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + V`: Clipboard manager"
+  "text": "`Super + Ctrl + V`: Clipboard manager",
+  "title": "What did you copy earlier?"
  },
  {
   "page": "Hotkeys",
   "section": "Universal clipboard",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "Usually on Linux, you need `Ctrl + Shift + C/V` to copy'n'paste in the terminal and `Ctrl + C/V` to do it everywhere else."
+  "text": "Usually on Linux, you need `Ctrl + Shift + C/V` to copy'n'paste in the terminal and `Ctrl + C/V` to do it everywhere else.",
+  "title": "No more Ctrl + Shift + C"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + C`: Capture menu (for keyboards w/o PrintScr button)"
+  "text": "`Super + Ctrl + C`: Capture menu (for keyboards w/o PrintScr button)",
+  "title": "No Print Screen key?"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Print Screen`: Screenshot"
+  "text": "`Print Screen`: Screenshot",
+  "title": "Take a screenshot"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Print Screen`: Screenrecord"
+  "text": "`Alt + Print Screen`: Screenrecord",
+  "title": "Record your screen"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Print Screen`: Color picker"
+  "text": "`Super + Print Screen`: Color picker",
+  "title": "What color is that?"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Print Screen`: Text extraction to clipboard"
+  "text": "`Super + Ctrl + Print Screen`: Text extraction to clipboard",
+  "title": "Copy text from anywhere"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + [`: Make webcam overlay smaller while recording"
+  "text": "`Super + Alt + [`: Make webcam overlay smaller while recording",
+  "title": "Shrink your face"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + ]`: Make webcam overlay larger while recording"
+  "text": "`Super + Alt + ]`: Make webcam overlay larger while recording",
+  "title": "Bigger webcam overlay"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + L`: Copy current URL from webapp or Chromium"
+  "text": "`Alt + Shift + L`: Copy current URL from webapp or Chromium",
+  "title": "Grab the URL"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + D`: Download the video on the current page to `~/Videos`"
+  "text": "`Alt + Shift + D`: Download the video on the current page to `~/Videos`",
+  "title": "Save that video"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + X`: Start/stop dictation (requires Install > AI > Dictation)"
+  "text": "`Super + Ctrl + X`: Start/stop dictation (requires Install > AI > Dictation)",
+  "title": "Just say it"
  },
  {
   "page": "Hotkeys",
   "section": "Capture",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "All capture options are also accessible under Trigger > Capture in the Omarchy menu (`Super + Space`)."
+  "text": "All capture options are also accessible under Trigger > Capture in the Omarchy menu (`Super + Space`).",
+  "title": "All capture tools in one place"
  },
  {
   "page": "Hotkeys",
   "section": "Notifications",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + ,`: Dismiss latest notification"
+  "text": "`Super + ,`: Dismiss latest notification",
+  "title": "Make that notification go away"
  },
  {
   "page": "Hotkeys",
   "section": "Notifications",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + ,`: Dismiss all notifications"
+  "text": "`Super + Shift + ,`: Dismiss all notifications",
+  "title": "Clear all notifications"
  },
  {
   "page": "Hotkeys",
   "section": "Notifications",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + ,`: Toggle silencing notifications"
+  "text": "`Super + Ctrl + ,`: Toggle silencing notifications",
+  "title": "Need some quiet?"
  },
  {
   "page": "Hotkeys",
   "section": "Notifications",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Alt + ,`: Invoke most recent notification"
+  "text": "`Super + Alt + ,`: Invoke most recent notification",
+  "title": "Act on that notification"
  },
  {
   "page": "Hotkeys",
   "section": "Notifications",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Alt + ,`: Open notification history"
+  "text": "`Super + Shift + Alt + ,`: Open notification history",
+  "title": "Missed a notification?"
  },
  {
   "page": "Hotkeys",
   "section": "Style",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Shift + Space`: Pick a new theme"
+  "text": "`Super + Ctrl + Shift + Space`: Pick a new theme",
+  "title": "Try another theme"
  },
  {
   "page": "Hotkeys",
   "section": "Style",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Space`: Pick theme background"
+  "text": "`Super + Ctrl + Space`: Pick theme background",
+  "title": "Change the background"
  },
  {
   "page": "Hotkeys",
   "section": "Style",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Backspace`: Toggle transparency on a window"
+  "text": "`Super + Backspace`: Toggle transparency on a window",
+  "title": "See-through windows"
  },
  {
   "page": "Hotkeys",
   "section": "Style",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Backspace`: Toggle single-window square aspect"
+  "text": "`Super + Ctrl + Backspace`: Toggle single-window square aspect",
+  "title": "Make it square"
  },
  {
   "page": "Hotkeys",
   "section": "Style",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "All style options are also accessible under Style in the Omarchy menu (`Super + Space`)."
+  "text": "All style options are also accessible under Style in the Omarchy menu (`Super + Space`).",
+  "title": "More style options"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + I`: Toggle locking on idle"
+  "text": "`Super + Ctrl + I`: Toggle locking on idle",
+  "title": "Keep the screen from locking"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + N`: Toggle nightlight display temperature"
+  "text": "`Super + Ctrl + N`: Toggle nightlight display temperature",
+  "title": "Easy on the eyes"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Delete`: Toggle laptop display on/off"
+  "text": "`Super + Ctrl + Delete`: Toggle laptop display on/off",
+  "title": "Laptop screen off"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + Delete`: Toggle laptop display mirroring"
+  "text": "`Super + Ctrl + Alt + Delete`: Toggle laptop display mirroring",
+  "title": "Mirror your laptop screen"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Space`: Toggle the top bar"
+  "text": "`Super + Shift + Space`: Toggle the top bar",
+  "title": "Hide the top bar"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + Mute`: Switch to next audio output"
+  "text": "`Shift + Mute`: Switch to next audio output",
+  "title": "Switch to your headphones"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + Play`: Switch to next media source"
+  "text": "`Shift + Play`: Switch to next media source",
+  "title": "Switch what's playing"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Shift + Backspace`: Toggle window gaps"
+  "text": "`Super + Shift + Backspace`: Toggle window gaps",
+  "title": "Close the gaps"
  },
  {
   "page": "Hotkeys",
   "section": "Toggles",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + F`: Toggle full screen desktop (top bar + window gaps)"
+  "text": "`Super + Ctrl + Alt + F`: Toggle full screen desktop (top bar + window gaps)",
+  "title": "Every pixel for your app"
  },
  {
   "page": "Hotkeys",
   "section": "Reminders",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + R`: Set a reminder"
+  "text": "`Super + Ctrl + R`: Set a reminder",
+  "title": "Remind me later"
  },
  {
   "page": "Hotkeys",
   "section": "Reminders",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + R`: See all reminders"
+  "text": "`Super + Ctrl + Alt + R`: See all reminders",
+  "title": "What was I supposed to do?"
  },
  {
   "page": "Hotkeys",
   "section": "Reminders",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Shift + R`: Clear all reminders"
+  "text": "`Super + Ctrl + Shift + R`: Clear all reminders",
+  "title": "Forget all reminders"
  },
  {
   "page": "Hotkeys",
   "section": "Notices",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + T`: Show time as notification"
+  "text": "`Super + Ctrl + Alt + T`: Show time as notification",
+  "title": "What time is it?"
  },
  {
   "page": "Hotkeys",
   "section": "Notices",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + B`: Show battery as notification"
+  "text": "`Super + Ctrl + Alt + B`: Show battery as notification",
+  "title": "How's the battery?"
  },
  {
   "page": "Hotkeys",
   "section": "Notices",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Alt + W`: Toggle weather as notification"
+  "text": "`Super + Ctrl + Alt + W`: Toggle weather as notification",
+  "title": "What's the weather like?"
  },
  {
   "page": "Hotkeys",
   "section": "Tmux",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "The prefix key is `Ctrl + Space` (`Ctrl + B` also works)."
+  "text": "The prefix key is `Ctrl + Space` (`Ctrl + B` also works).",
+  "title": "The Tmux prefix"
  },
  {
   "page": "Hotkeys",
   "section": "Panes",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Enter`: Split pane below (no prefix)"
+  "text": "`Alt + Enter`: Split pane below (no prefix)",
+  "title": "Split a pane below"
  },
  {
   "page": "Hotkeys",
   "section": "Panes",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + Enter`: Split pane beside (no prefix)"
+  "text": "`Alt + Shift + Enter`: Split pane beside (no prefix)",
+  "title": "Split a pane beside"
  },
  {
   "page": "Hotkeys",
   "section": "Panes",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Escape`: Kill pane (no prefix)"
+  "text": "`Alt + Escape`: Kill pane (no prefix)",
+  "title": "Close a pane"
  },
  {
   "page": "Hotkeys",
   "section": "Panes",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Arrows`: Move between panes"
+  "text": "`Ctrl + Alt + Arrows`: Move between panes",
+  "title": "Move between panes"
  },
  {
   "page": "Hotkeys",
   "section": "Panes",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Shift + Arrows`: Resize panes"
+  "text": "`Ctrl + Alt + Shift + Arrows`: Resize panes",
+  "title": "Resize a pane"
  },
  {
   "page": "Hotkeys",
   "section": "Windows",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + 1-9`: Go to specific window"
+  "text": "`Alt + 1-9`: Go to specific window",
+  "title": "Jump to a Tmux window"
  },
  {
   "page": "Hotkeys",
   "section": "Windows",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Arrow Left/Right`: Move between windows"
+  "text": "`Alt + Arrow Left/Right`: Move between windows",
+  "title": "Next Tmux window"
  },
  {
   "page": "Hotkeys",
   "section": "Windows",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Shift + Arrow Left/Right`: Move window left/right"
+  "text": "`Alt + Shift + Arrow Left/Right`: Move window left/right",
+  "title": "Reorder Tmux windows"
  },
  {
   "page": "Hotkeys",
   "section": "Sessions",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Arrow Up/Down`: Move between sessions"
+  "text": "`Alt + Arrow Up/Down`: Move between sessions",
+  "title": "Switch sessions"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Shift + E`: New split below"
+  "text": "`Ctrl + Shift + E`: New split below",
+  "title": "Split the terminal below"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Shift + O`: New split besides"
+  "text": "`Ctrl + Shift + O`: New split besides",
+  "title": "Split the terminal beside"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Alt + Arrows`: Move between splits"
+  "text": "`Ctrl + Alt + Arrows`: Move between splits",
+  "title": "Move between splits"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Shift + Arrows`: Resize split by 10 lines"
+  "text": "`Super + Ctrl + Shift + Arrows`: Resize split by 10 lines",
+  "title": "Resize a split"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Super + Ctrl + Shift + Alt + Arrows`: Resize split by 100 lines"
+  "text": "`Super + Ctrl + Shift + Alt + Arrows`: Resize split by 100 lines",
+  "title": "Resize a split a lot"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Shift + T`: New tab"
+  "text": "`Ctrl + Shift + T`: New tab",
+  "title": "New terminal tab"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Shift + Arrows`: Move between tabs"
+  "text": "`Ctrl + Shift + Arrows`: Move between tabs",
+  "title": "Switch terminal tabs"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Alt + Numbers`: Go to specific tab"
+  "text": "`Alt + Numbers`: Go to specific tab",
+  "title": "Jump to a terminal tab"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + Pg Up/Down`: Scroll the history"
+  "text": "`Shift + Pg Up/Down`: Scroll the history",
+  "title": "Scroll back up"
  },
  {
   "page": "Hotkeys",
   "section": "Ghostty Terminal",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Left mouse`: Open link in browser"
+  "text": "`Ctrl + Left mouse`: Open link in browser",
+  "title": "Open a link from the terminal"
  },
  {
   "page": "Hotkeys",
   "section": "File Manager",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + L`: Go to path"
+  "text": "`Ctrl + L`: Go to path",
+  "title": "Type a path"
  },
  {
   "page": "Hotkeys",
   "section": "Navigation",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + W W`: Jump between sidebar and editor"
+  "text": "`Ctrl + W W`: Jump between sidebar and editor",
+  "title": "Sidebar or editor?"
  },
  {
   "page": "Hotkeys",
   "section": "Navigation",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Ctrl + Left/right arrow`: Change size of sidebar"
+  "text": "`Ctrl + Left/right arrow`: Change size of sidebar",
+  "title": "Resize the sidebar"
  },
  {
   "page": "Hotkeys",
   "section": "Navigation",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + H`: Go to left file tab"
+  "text": "`Shift + H`: Go to left file tab",
+  "title": "Previous file tab"
  },
  {
   "page": "Hotkeys",
   "section": "Navigation",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + L`: Go to right file tab"
+  "text": "`Shift + L`: Go to right file tab",
+  "title": "Next file tab"
  },
  {
   "page": "Hotkeys",
   "section": "While in sidebar",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "`Shift + A`: Add new subdir in parent dir"
+  "text": "`Shift + A`: Add new subdir in parent dir",
+  "title": "Make a new folder"
  },
  {
   "page": "Hotkeys",
   "section": "Quick Emojis",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "You can use `Super + Ctrl + E` to show a complete emoji picker that'll put the selection on the clipboard or you can use these quick access options."
+  "text": "You can use `Super + Ctrl + E` to show a complete emoji picker that'll put the selection on the clipboard or you can use these quick access options.",
+  "title": "Emojis!"
  },
  {
   "page": "Hotkeys",
   "section": "Quick Completions",
   "url": "https://omarchy.org/manual/hotkeys/",
-  "text": "You can add more of your own by editing `~/.XCompose`, then running `omarchy-restart-xcompose` in the terminal to get the changes picked up."
+  "text": "You can add more of your own by editing `~/.XCompose`, then running `omarchy-restart-xcompose` in the terminal to get the changes picked up.",
+  "title": "Your own shortcuts for typing"
  },
  {
   "page": "Unified Clipboard & History",
   "section": "",
   "url": "https://omarchy.org/manual/unified-clipboard-history/",
-  "text": "Note that most agent harnesses will use `Ctrl + V` for pasting images, but `Super + V` for pasting text."
+  "text": "Note that most agent harnesses will use `Ctrl + V` for pasting images, but `Super + V` for pasting text.",
+  "title": "Pasting images into an agent?"
  },
  {
   "page": "Unified Clipboard & History",
   "section": "Clipboard history",
   "url": "https://omarchy.org/manual/unified-clipboard-history/",
-  "text": "You trigger it by `Super + Ctrl + V`, select your entry with return, and then that'll be placed on the clipboard ready to paste on `Super + V`."
+  "text": "You trigger it by `Super + Ctrl + V`, select your entry with return, and then that'll be placed on the clipboard ready to paste on `Super + V`.",
+  "title": "Paste something from earlier"
  },
  {
   "page": "Reminders",
   "section": "",
   "url": "https://omarchy.org/manual/reminders/",
-  "text": "You can do this via `Super + Ctrl + R`, seeing all the ones set via `Super + Ctrl + Alt + R`, and clearing all via `Super + Ctrl + Shift + R`."
+  "text": "You can do this via `Super + Ctrl + R`, seeing all the ones set via `Super + Ctrl + Alt + R`, and clearing all via `Super + Ctrl + Shift + R`.",
+  "title": "Don't forget!"
  },
  {
   "page": "Reminders",
   "section": "",
   "url": "https://omarchy.org/manual/reminders/",
-  "text": "You can also use the cli with `omarchy reminder 7 'Tea ready'`."
+  "text": "You can also use the cli with `omarchy reminder 7 'Tea ready'`.",
+  "title": "A reminder from the terminal"
  },
  {
   "page": "Notices",
   "section": "Weather",
   "url": "https://omarchy.org/manual/notices/",
-  "text": "You can pin it down with `omarchy weather location --set Malibu`, or be exact about it by adding coordinates: `omarchy weather location --set Malibu 34.0259,-118.7798`."
+  "text": "You can pin it down with `omarchy weather location --set Malibu`, or be exact about it by adding coordinates: `omarchy weather location --set Malibu 34.0259,-118.7798`.",
+  "title": "Is that where you are?"
  },
  {
   "page": "Notices",
   "section": "Weather",
   "url": "https://omarchy.org/manual/notices/",
-  "text": "Run `omarchy weather location` on its own to see where it thinks you are, and `--clear` to go back to auto-detection."
+  "text": "Run `omarchy weather location` on its own to see where it thinks you are, and `--clear` to go back to auto-detection.",
+  "title": "Where does it think you are?"
  },
  {
   "page": "Text Extraction & Dictation",
   "section": "Text Extraction",
   "url": "https://omarchy.org/manual/text-extraction-dictation/",
-  "text": "Hit `Super + Ctrl + PrtScr` to select a region on the screen for text extraction."
+  "text": "Hit `Super + Ctrl + PrtScr` to select a region on the screen for text extraction.",
+  "title": "Can't copy that text?"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "If your keyboard doesn't have a Print Screen key at all, `Super + Ctrl + C` opens the same set as a menu."
+  "text": "If your keyboard doesn't have a Print Screen key at all, `Super + Ctrl + C` opens the same set as a menu.",
+  "title": "No Print Screen key?"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Alt + Print Screen`: Screenrecord (or stop the one that's running)"
+  "text": "`Alt + Print Screen`: Screenrecord (or stop the one that's running)",
+  "title": "Start or stop recording"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Print Screen`: Colour picker"
+  "text": "`Super + Print Screen`: Colour picker",
+  "title": "Pick a colour"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Ctrl + Print Screen`: Extract text from a region"
+  "text": "`Super + Ctrl + Print Screen`: Extract text from a region",
+  "title": "Grab text from a picture"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Ctrl + C`: Capture menu"
+  "text": "`Super + Ctrl + C`: Capture menu",
+  "title": "All the capture tools"
  },
  {
   "page": "Screenshots & Recording",
   "section": "",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Ctrl + .`: Transcode a picture or video"
+  "text": "`Super + Ctrl + .`: Transcode a picture or video",
+  "title": "Make that file smaller"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screenshots",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "Hit `Print Screen` and the screen freezes so nothing shifts under you while you aim."
+  "text": "Hit `Print Screen` and the screen freezes so nothing shifts under you while you aim.",
+  "title": "Hold still!"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screenshots",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "Hit `Print Screen` again to dismiss the picker."
+  "text": "Hit `Print Screen` again to dismiss the picker.",
+  "title": "Changed your mind?"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screenshots",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "The result goes two places at once: a PNG in your pictures directory, and the clipboard, so you can paste it straight into a chat window with `Super + V`."
+  "text": "The result goes two places at once: a PNG in your pictures directory, and the clipboard, so you can paste it straight into a chat window with `Super + V`.",
+  "title": "It's already on your clipboard"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screenshots",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "Click it (or hit `Super + Alt + ,` to invoke the last notification) and the shot opens in Tensaku, the annotation editor, where you can draw arrows and boxes on it before you send it."
+  "text": "Click it (or hit `Super + Alt + ,` to invoke the last notification) and the shot opens in Tensaku, the annotation editor, where you can draw arrows and boxes on it before you send it.",
+  "title": "Draw on your screenshot"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Driving the picker from the keyboard",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Ctrl + Return`: Capture the whole screen"
+  "text": "`Ctrl + Return`: Capture the whole screen",
+  "title": "Capture the whole screen"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Driving the picker from the keyboard",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Tab` / `Ctrl + Tab`: Highlight the next / previous window"
+  "text": "`Tab` / `Ctrl + Tab`: Highlight the next / previous window",
+  "title": "Pick a window to capture"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screen recording",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Alt + Print Screen` opens Trigger > Capture > Screenrecord, which asks what you want on the soundtrack: no audio, desktop audio, desktop plus microphone, or desktop plus microphone plus webcam."
+  "text": "`Alt + Print Screen` opens Trigger > Capture > Screenrecord, which asks what you want on the soundtrack: no audio, desktop audio, desktop plus microphone, or desktop plus microphone plus webcam.",
+  "title": "Recording with sound?"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Screen recording",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "You can also stop with `Alt + Print Screen` again, or with the Stop Screenrecording entry under Trigger > Capture > Screenrecord, which only appears while something is actually recording."
+  "text": "You can also stop with `Alt + Print Screen` again, or with the Stop Screenrecording entry under Trigger > Capture > Screenrecord, which only appears while something is actually recording.",
+  "title": "How do I stop recording?"
  },
  {
   "page": "Screenshots & Recording",
   "section": "The webcam overlay",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Alt + [`: Make the webcam overlay smaller"
+  "text": "`Super + Alt + [`: Make the webcam overlay smaller",
+  "title": "Smaller webcam, please"
  },
  {
   "page": "Screenshots & Recording",
   "section": "The webcam overlay",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Alt + ]`: Make the webcam overlay larger"
+  "text": "`Super + Alt + ]`: Make the webcam overlay larger",
+  "title": "Bigger webcam, please"
  },
  {
   "page": "Screenshots & Recording",
   "section": "The webcam overlay",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "You can also call it directly with `omarchy-capture-webcam-resize small`, or `reset` to go back to medium."
+  "text": "You can also call it directly with `omarchy-capture-webcam-resize small`, or `reset` to go back to medium.",
+  "title": "Resize the webcam from a script"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Text, QR codes, and colours",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Ctrl + Print Screen` selects a region and OCRs it to the clipboard."
+  "text": "`Super + Ctrl + Print Screen` selects a region and OCRs it to the clipboard.",
+  "title": "Turn a picture into text"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Text, QR codes, and colours",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Print Screen` (or Trigger > Capture > Color) turns the cursor into an eyedropper."
+  "text": "`Super + Print Screen` (or Trigger > Capture > Color) turns the cursor into an eyedropper.",
+  "title": "Eyedropper!"
  },
  {
   "page": "Screenshots & Recording",
   "section": "Transcoding before you share",
   "url": "https://omarchy.org/manual/screenshots-recording/",
-  "text": "`Super + Ctrl + .` (or Trigger > Transcode) fixes that."
+  "text": "`Super + Ctrl + .` (or Trigger > Transcode) fixes that.",
+  "title": "File too big to share?"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + O` opens Trigger > Toggle directly, or you can walk there from the Omarchy menu (`Super + Space`)."
+  "text": "`Super + Ctrl + O` opens Trigger > Toggle directly, or you can walk there from the Omarchy menu (`Super + Space`).",
+  "title": "Where are the switches?"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "From the terminal, the same switches are `omarchy toggle <thing>`."
+  "text": "From the terminal, the same switches are `omarchy toggle <thing>`.",
+  "title": "Toggles from the terminal"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "Run `omarchy toggle` on its own to see the whole group."
+  "text": "Run `omarchy toggle` on its own to see the whole group.",
+  "title": "What can I toggle?"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + N`: Night light. From a terminal: `omarchy toggle nightlight`"
+  "text": "`Super + Ctrl + N`: Night light. From a terminal: `omarchy toggle nightlight`",
+  "title": "Working late?"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + ,`: Silence notifications. From a terminal: `omarchy toggle notification silencing`"
+  "text": "`Super + Ctrl + ,`: Silence notifications. From a terminal: `omarchy toggle notification silencing`",
+  "title": "Do not disturb"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + I`: Stay awake (no idle lock). From a terminal: `omarchy toggle idle`"
+  "text": "`Super + Ctrl + I`: Stay awake (no idle lock). From a terminal: `omarchy toggle idle`",
+  "title": "Don't fall asleep!"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Shift + Space`: Menu bar. From a terminal: `omarchy toggle bar`"
+  "text": "`Super + Shift + Space`: Menu bar. From a terminal: `omarchy toggle bar`",
+  "title": "Bar on, bar off"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The toggle menu",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "The touchpad, touchscreen, and hybrid GPU switches live under Trigger > Hardware (`Super + Ctrl + H`) rather than under Toggle, since they only show up when you actually have that hardware."
+  "text": "The touchpad, touchscreen, and hybrid GPU switches live under Trigger > Hardware (`Super + Ctrl + H`) rather than under Toggle, since they only show up when you actually have that hardware.",
+  "title": "Where's the touchpad switch?"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "Night light",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + N` warms the screen to 4000K, and hitting it again puts it back to 6500K."
+  "text": "`Super + Ctrl + N` warms the screen to 4000K, and hitting it again puts it back to 6500K.",
+  "title": "Warm up your screen"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "Do not disturb",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`Super + Ctrl + ,` silences notifications."
+  "text": "`Super + Ctrl + ,` silences notifications.",
+  "title": "Silence, please"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "Idle",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "To stop locking on idle entirely, `Super + Ctrl + I`, or `omarchy toggle idle`, flips stay awake on, and the coffee cup indicator appears in the bar."
+  "text": "To stop locking on idle entirely, `Super + Ctrl + I`, or `omarchy toggle idle`, flips stay awake on, and the coffee cup indicator appears in the bar.",
+  "title": "Coffee break mode"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "Idle",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`omarchy toggle idle status` prints the current state as JSON if you need it from a script."
+  "text": "`omarchy toggle idle status` prints the current state as JSON if you need it from a script.",
+  "title": "Idle state for your scripts"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The screensaver",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "You can start it on demand from System > Screensaver (`Super + Esc`), which forces it up even if you've turned the idle screensaver off."
+  "text": "You can start it on demand from System > Screensaver (`Super + Esc`), which forces it up even if you've turned the idle screensaver off.",
+  "title": "Screensaver, right now"
  },
  {
   "page": "Toggles, Idle & the Screensaver",
   "section": "The screensaver",
   "url": "https://omarchy.org/manual/toggles-idle-screensaver/",
-  "text": "`omarchy toggle screensaver` is what turns the idle one off, if you'd rather go straight from working to locked."
+  "text": "`omarchy toggle screensaver` is what turns the idle one off, if you'd rather go straight from working to locked.",
+  "title": "No screensaver, please"
  },
  {
   "page": "Omarchy CLI",
   "section": "",
   "url": "https://omarchy.org/manual/omarchy-cli/",
-  "text": "Omarchy is usually controlled through the hotkeys and the Omarchy menu (`Super + Space`)."
+  "text": "Omarchy is usually controlled through the hotkeys and the Omarchy menu (`Super + Space`).",
+  "title": "Hotkeys first, menu second"
  },
  {
   "page": "Omarchy CLI",
   "section": "",
   "url": "https://omarchy.org/manual/omarchy-cli/",
-  "text": "Every command takes `--help` too, whether you ask a whole group (`omarchy capture --help`) or a single command (`omarchy capture screenshot --help`)."
+  "text": "Every command takes `--help` too, whether you ask a whole group (`omarchy capture --help`) or a single command (`omarchy capture screenshot --help`).",
+  "title": "Stuck on a command?"
  },
  {
   "page": "Terminal",
   "section": "",
   "url": "https://omarchy.org/manual/terminal/",
-  "text": "You start a new terminal using `Super + Return`."
+  "text": "You start a new terminal using `Super + Return`.",
+  "title": "Open a new terminal"
  },
  {
   "page": "Terminal",
   "section": "Tmux",
   "url": "https://omarchy.org/manual/terminal/",
-  "text": "You start a new Tmux session in a fresh terminal using `Super + Alt + Return`, and because Tmux is a persistent process, you can resume your session even if you close that terminal."
+  "text": "You start a new Tmux session in a fresh terminal using `Super + Alt + Return`, and because Tmux is a persistent process, you can resume your session even if you close that terminal.",
+  "title": "Never lose your terminal session"
  },
  {
   "page": "Neovim",
   "section": "LazyVim Basics",
   "url": "https://omarchy.org/manual/neovim/",
-  "text": "`Ctrl + W W` - Hop from the file tree to the editor and back."
+  "text": "`Ctrl + W W` - Hop from the file tree to the editor and back.",
+  "title": "Tree or code?"
  },
  {
   "page": "Neovim",
   "section": "LazyVim Basics",
   "url": "https://omarchy.org/manual/neovim/",
-  "text": "`Shift + H` - Move left between the open tabs (vim calls them buffers)."
+  "text": "`Shift + H` - Move left between the open tabs (vim calls them buffers).",
+  "title": "Previous buffer"
  },
  {
   "page": "Neovim",
   "section": "LazyVim Basics",
   "url": "https://omarchy.org/manual/neovim/",
-  "text": "`Shift + L` - Move right between the open tabs."
+  "text": "`Shift + L` - Move right between the open tabs.",
+  "title": "Next buffer"
  },
  {
   "page": "Neovim",
   "section": "LazyVim Basics",
   "url": "https://omarchy.org/manual/neovim/",
-  "text": "While you're in the file tree (`Space E` to reveal, `Ctrl + W W` to hop over there), you can add a new file with `a` or a new directory with `A`."
+  "text": "While you're in the file tree (`Space E` to reveal, `Ctrl + W W` to hop over there), you can add a new file with `a` or a new directory with `A`.",
+  "title": "New file, from the tree"
  },
  {
   "page": "Neovim",
   "section": "Starting Neovim",
   "url": "https://omarchy.org/manual/neovim/",
-  "text": "You can start Neovim using `Super + Shift + N` (the binding launches your default editor, which is Neovim out of the box), but it's usually easier to drive it from the terminal by navigating to the directory you wish to work in and typing `n`."
+  "text": "You can start Neovim using `Super + Shift + N` (the binding launches your default editor, which is Neovim out of the box), but it's usually easier to drive it from the terminal by navigating to the directory you wish to work in and typing `n`.",
+  "title": "Just type n"
  },
  {
   "page": "AI",
   "section": "",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "To wrap an additional CLI the same way, run `omarchy-mise-install <package> [command-name]`."
+  "text": "To wrap an additional CLI the same way, run `omarchy-mise-install <package> [command-name]`.",
+  "title": "Bring your own AI tool"
  },
  {
   "page": "AI",
   "section": "",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "The stubs are kept current along with everything else mise manages when you run `omarchy update` (or the `mup` alias)."
+  "text": "The stubs are kept current along with everything else mise manages when you run `omarchy update` (or the `mup` alias).",
+  "title": "Keep your AI tools up to date"
  },
  {
   "page": "AI",
   "section": "The default agent",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "Pick your default agent with `omarchy default agent <name>` or under Setup > Defaults > Agent in the Omarchy Menu (`Super + Space`)."
+  "text": "Pick your default agent with `omarchy default agent <name>` or under Setup > Defaults > Agent in the Omarchy Menu (`Super + Space`).",
+  "title": "Pick your favourite agent"
  },
  {
   "page": "AI",
   "section": "The default agent",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "You can also launch it straight into a task with `omarchy agent prompt \"Review this project\"`."
+  "text": "You can also launch it straight into a task with `omarchy agent prompt \"Review this project\"`.",
+  "title": "Give your agent a task"
  },
  {
   "page": "AI",
   "section": "The agents panel",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "The usage records behind it are regenerated every 15 minutes by `omarchy agent usage-update`, and the panel can even merge usage from your other machines via a synced folder."
+  "text": "The usage records behind it are regenerated every 15 minutes by `omarchy agent usage-update`, and the panel can even merge usage from your other machines via a synced folder.",
+  "title": "How much AI did you use?"
  },
  {
   "page": "AI",
   "section": "Crash diagnosis",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "You can also run it by hand against any PID from `coredumpctl list` with `omarchy agent crash <pid>`."
+  "text": "You can also run it by hand against any PID from `coredumpctl list` with `omarchy agent crash <pid>`.",
+  "title": "Why did that crash?"
  },
  {
   "page": "AI",
   "section": "Crash diagnosis",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "Turn it off under Trigger > Toggle > Crash Capture (or with `omarchy toggle crash-capture`) and the notifications stop; `omarchy agent crash <pid>` still works by hand."
+  "text": "Turn it off under Trigger > Toggle > Crash Capture (or with `omarchy toggle crash-capture`) and the notifications stop; `omarchy agent crash <pid>` still works by hand.",
+  "title": "Too many crash reports?"
  },
  {
   "page": "AI",
   "section": "Crash diagnosis",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "`omarchy crash mute hyprland` stops the notifications for that program only, `omarchy crash mute hyprland off` brings them back, and `omarchy crash mute` on its own lists what you've muted."
+  "text": "`omarchy crash mute hyprland` stops the notifications for that program only, `omarchy crash mute hyprland off` brings them back, and `omarchy crash mute` on its own lists what you've muted.",
+  "title": "Mute crash reports for one app"
  },
  {
   "page": "AI",
   "section": "Crash diagnosis",
   "url": "https://omarchy.org/manual/ai/",
-  "text": "Quote a name with a space in it, as in `omarchy crash mute 'Some App'`."
+  "text": "Quote a name with a space in it, as in `omarchy crash mute 'Some App'`.",
+  "title": "App names with spaces"
  },
  {
   "page": "Development Tools",
   "section": "Alternative Editors",
   "url": "https://omarchy.org/manual/development-tools/",
-  "text": "Omarchy ships with Neovim by default, but if you'd like something a bit more mainstream and familiar, you can run the Omarchy Menu (`Super + Space`) and see the options under Install > Editor."
+  "text": "Omarchy ships with Neovim by default, but if you'd like something a bit more mainstream and familiar, you can run the Omarchy Menu (`Super + Space`) and see the options under Install > Editor.",
+  "title": "Not a Neovim person?"
  },
  {
   "page": "Development Tools",
   "section": "Environment",
   "url": "https://omarchy.org/manual/development-tools/",
-  "text": "Omarchy supports setting up a whole host of development environments through the Install > Development section of the Omarchy Menu (`Super + Space`)."
+  "text": "Omarchy supports setting up a whole host of development environments through the Install > Development section of the Omarchy Menu (`Super + Space`).",
+  "title": "Set up your dev environment"
  },
  {
   "page": "Development Tools",
   "section": "Docker",
   "url": "https://omarchy.org/manual/development-tools/",
-  "text": "Remember to checkout the Lazydocker command to manage your containers in a cool TUI using `Super + Shift + D`; it asks for authorization the first time unless you have enabled sudoless Docker."
+  "text": "Remember to checkout the Lazydocker command to manage your containers in a cool TUI using `Super + Shift + D`; it asks for authorization the first time unless you have enabled sudoless Docker.",
+  "title": "Containers in a friendly TUI"
  },
  {
   "page": "Shell Tools",
   "section": "fzf",
   "url": "https://omarchy.org/manual/shell-tools/",
-  "text": "You can use `Ctrl + R` to use fzf to fuzzy find through your command history."
+  "text": "You can use `Ctrl + R` to use fzf to fuzzy find through your command history.",
+  "title": "What was that command again?"
  },
  {
   "page": "Shell Functions",
   "section": "SSH reconnection",
   "url": "https://omarchy.org/manual/shell-functions/",
-  "text": "`ssh` itself is wrapped in a function that cleans up the terminal if a connection dies while a remote tmux, Herdr, or editor has claimed it, and then automatically reconnects when an interactive session drops (Ctrl-C stops the retry loop)."
+  "text": "`ssh` itself is wrapped in a function that cleans up the terminal if a connection dies while a remote tmux, Herdr, or editor has claimed it, and then automatically reconnects when an interactive session drops (Ctrl-C stops the retry loop).",
+  "title": "SSH that reconnects itself"
  },
  {
   "page": "TUIs",
   "section": "Lazydocker",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "You can start it with `Super + Shift + D`."
+  "text": "You can start it with `Super + Shift + D`.",
+  "title": "Open Lazydocker"
  },
  {
   "page": "TUIs",
   "section": "Btop",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Omarchy calls it Activity, and you start it by hitting `Super + Ctrl + T`."
+  "text": "Omarchy calls it Activity, and you start it by hitting `Super + Ctrl + T`.",
+  "title": "What's your computer doing?"
  },
  {
   "page": "TUIs",
   "section": "Herdr",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "You start it (or reattach to your existing session) with `Super + Ctrl + Return`."
+  "text": "You start it (or reattach to your existing session) with `Super + Ctrl + Return`.",
+  "title": "Back to your agents"
  },
  {
   "page": "TUIs",
   "section": "Herdr",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Omarchy ships a Herdr configuration that mirrors its Tmux config, so the prefix key is `Ctrl + Space` here too."
+  "text": "Omarchy ships a Herdr configuration that mirrors its Tmux config, so the prefix key is `Ctrl + Space` here too.",
+  "title": "Same prefix as Tmux"
  },
  {
   "page": "TUIs",
   "section": "Herdr",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "You can browse all the keybindings with `Super + Ctrl + K`."
+  "text": "You can browse all the keybindings with `Super + Ctrl + K`.",
+  "title": "Herdr shortcuts"
  },
  {
   "page": "TUIs",
   "section": "Fastfetch",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Omarchy has packaged this as About in the Omarchy menu (`Super + Space`)."
+  "text": "Omarchy has packaged this as About in the Omarchy menu (`Super + Space`).",
+  "title": "About this computer"
  },
  {
   "page": "TUIs",
   "section": "Disk Usage",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "When the drive fills up and you have no idea what's eating it, launch Disk Usage from the app launcher (`Super + Space`)."
+  "text": "When the drive fills up and you have no idea what's eating it, launch Disk Usage from the app launcher (`Super + Space`).",
+  "title": "Where did my disk space go?"
  },
  {
   "page": "TUIs",
   "section": "Cliamp",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Launch it with `Super + Shift + Alt + M`, or from the Omarchy menu under Apps."
+  "text": "Launch it with `Super + Shift + Alt + M`, or from the Omarchy menu under Apps.",
+  "title": "Music in the terminal"
  },
  {
   "page": "TUIs",
   "section": "What about Wi-Fi and Bluetooth?",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Click the Wi-Fi icon in the top bar (or hit `Super + Ctrl + W`) to see networks and connect, and click the Bluetooth icon (or hit `Super + Ctrl + B`) to pair and connect devices."
+  "text": "Click the Wi-Fi icon in the top bar (or hit `Super + Ctrl + W`) to see networks and connect, and click the Bluetooth icon (or hit `Super + Ctrl + B`) to pair and connect devices.",
+  "title": "Wi-Fi and Bluetooth, the easy way"
  },
  {
   "page": "TUIs",
   "section": "Adding your own",
   "url": "https://omarchy.org/manual/tuis/",
-  "text": "Go to Install > TUI in the Omarchy menu (`Super + Space`), give it a name, a launch command, a window style, and an icon, and it'll show up in the app launcher like any other application."
+  "text": "Go to Install > TUI in the Omarchy menu (`Super + Space`), give it a name, a launch command, a window style, and an icon, and it'll show up in the app launcher like any other application.",
+  "title": "Add your own TUI"
  },
  {
   "page": "GUIs",
   "section": "Files",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "`Super + Shift + F` opens it, and `Super + Shift + Alt + F` opens it in the directory your terminal is sitting in, which saves a lot of clicking."
+  "text": "`Super + Shift + F` opens it, and `Super + Shift + Alt + F` opens it in the directory your terminal is sitting in, which saves a lot of clicking.",
+  "title": "Files where your terminal is"
  },
  {
   "page": "GUIs",
   "section": "Files",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "`Ctrl + L` lets you type a path, and hitting `Space` on any file gives you a quick preview without opening anything."
+  "text": "`Ctrl + L` lets you type a path, and hitting `Space` on any file gives you a quick preview without opening anything.",
+  "title": "Peek without opening"
  },
  {
   "page": "GUIs",
   "section": "Files",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "For anything more involved, formatting a drive, checking SMART health, creating partitions, launch Disks from the app launcher (`Super + Space`)."
+  "text": "For anything more involved, formatting a drive, checking SMART health, creating partitions, launch Disks from the app launcher (`Super + Space`).",
+  "title": "Drives and partitions"
  },
  {
   "page": "GUIs",
   "section": "Obsidian",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Obsidian with `Super + Shift + O`."
+  "text": "You start Obsidian with `Super + Shift + O`.",
+  "title": "Open Obsidian"
  },
  {
   "page": "GUIs",
   "section": "Omawrite",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Omawrite with `Super + Shift + W`."
+  "text": "You start Omawrite with `Super + Shift + W`.",
+  "title": "Open Omawrite"
  },
  {
   "page": "GUIs",
   "section": "Pinta",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Pinta via the application launcher (`Super + Space`)."
+  "text": "You start Pinta via the application launcher (`Super + Space`).",
+  "title": "Need to edit an image?"
  },
  {
   "page": "GUIs",
   "section": "Aether",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Aether via the application launcher (`Super + Space`)."
+  "text": "You start Aether via the application launcher (`Super + Space`).",
+  "title": "Design your own theme"
  },
  {
   "page": "GUIs",
   "section": "LocalSend",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You can open the Share menu on `Super + Ctrl + S` or under Trigger > Share in the Omarchy menu."
+  "text": "You can open the Share menu on `Super + Ctrl + S` or under Trigger > Share in the Omarchy menu.",
+  "title": "Share a file"
  },
  {
   "page": "GUIs",
   "section": "LibreOffice",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start LibreOffice via the application launcher (`Super + Space`)."
+  "text": "You start LibreOffice via the application launcher (`Super + Space`).",
+  "title": "Documents and spreadsheets"
  },
  {
   "page": "GUIs",
   "section": "Omacalc",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Omacalc with `Super + Ctrl + Q` (or the calculator key, if your keyboard has one)."
+  "text": "You start Omacalc with `Super + Ctrl + Q` (or the calculator key, if your keyboard has one).",
+  "title": "Quick sum?"
  },
  {
   "page": "GUIs",
   "section": "Signal",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Signal with `Super + Shift + G`."
+  "text": "You start Signal with `Super + Shift + G`.",
+  "title": "Message someone on Signal"
  },
  {
   "page": "GUIs",
   "section": "mpv",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start mpv via the application launcher (`Super + Space`) or just double-click on a video in the file manager."
+  "text": "You start mpv via the application launcher (`Super + Space`) or just double-click on a video in the file manager.",
+  "title": "Play a video"
  },
  {
   "page": "GUIs",
   "section": "OBS Studio",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start OBS Studio via the application launcher (`Super + Space`)."
+  "text": "You start OBS Studio via the application launcher (`Super + Space`).",
+  "title": "Going live?"
  },
  {
   "page": "GUIs",
   "section": "Kdenlive",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Kdenlive via the application launcher (`Super + Space`)."
+  "text": "You start Kdenlive via the application launcher (`Super + Space`).",
+  "title": "Edit a video"
  },
  {
   "page": "GUIs",
   "section": "Omacut",
   "url": "https://omarchy.org/manual/guis/",
-  "text": "You start Omacut via the application launcher (`Super + Space`)."
+  "text": "You start Omacut via the application launcher (`Super + Space`).",
+  "title": "A quick video cut"
  },
  {
   "page": "Browsers",
   "section": "Copy URL and Download Video",
   "url": "https://omarchy.org/manual/browsers/",
-  "text": "Copy URL puts the current tab's address on your clipboard with `Alt + Shift + L`."
+  "text": "Copy URL puts the current tab's address on your clipboard with `Alt + Shift + L`.",
+  "title": "Copy the page address"
  },
  {
   "page": "Browsers",
   "section": "Copy URL and Download Video",
   "url": "https://omarchy.org/manual/browsers/",
-  "text": "Download Video grabs the video playing on the page you're looking at with `Alt + Shift + D`."
+  "text": "Download Video grabs the video playing on the page you're looking at with `Alt + Shift + D`.",
+  "title": "Download that video"
  },
  {
   "page": "Commercial apps/services",
   "section": "1Password",
   "url": "https://omarchy.org/manual/commercial-apps-services/",
-  "text": "You start 1Password with `Super + Shift + /`."
+  "text": "You start 1Password with `Super + Shift + /`.",
+  "title": "Open 1Password"
  },
  {
   "page": "Commercial apps/services",
   "section": "Spotify",
   "url": "https://omarchy.org/manual/commercial-apps-services/",
-  "text": "You start Spotify using `Super + Shift + M`."
+  "text": "You start Spotify using `Super + Shift + M`.",
+  "title": "Play some music"
  },
  {
   "page": "Web Apps",
   "section": "",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can add your own web apps using Install > Web App in the Omarchy menu (`Super + Space`)."
+  "text": "You can add your own web apps using Install > Web App in the Omarchy menu (`Super + Space`).",
+  "title": "Make your own web app"
  },
  {
   "page": "Web Apps",
   "section": "",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "When you're in a web app, you can copy the current URL to the clipboard using `Shift + Alt + L`."
+  "text": "When you're in a web app, you can copy the current URL to the clipboard using `Shift + Alt + L`.",
+  "title": "Copy the web app's URL"
  },
  {
   "page": "Web Apps",
   "section": "HEY",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start HEY Email using `Super + Shift + E`, jump straight to composing a new email using `Super + Shift + Alt + E`, and start HEY Calendar using `Super + Shift + C`."
+  "text": "You can start HEY Email using `Super + Shift + E`, jump straight to composing a new email using `Super + Shift + Alt + E`, and start HEY Calendar using `Super + Shift + C`.",
+  "title": "HEY there!"
  },
  {
   "page": "Web Apps",
   "section": "Basecamp",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start Basecamp using the application launcher (`Super + Space`)"
+  "text": "You can start Basecamp using the application launcher (`Super + Space`)",
+  "title": "Open Basecamp"
  },
  {
   "page": "Web Apps",
   "section": "ChatGPT",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start ChatGPT using `Super + Shift + A`."
+  "text": "You can start ChatGPT using `Super + Shift + A`.",
+  "title": "Chat with ChatGPT"
  },
  {
   "page": "Web Apps",
   "section": "Grok",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start Grok using `Super + Shift + Alt + A`."
+  "text": "You can start Grok using `Super + Shift + Alt + A`.",
+  "title": "Chat with Grok"
  },
  {
   "page": "Web Apps",
   "section": "WhatsApp",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start WhatsApp using `Super + Shift + Alt + G`."
+  "text": "You can start WhatsApp using `Super + Shift + Alt + G`.",
+  "title": "Message someone on WhatsApp"
  },
  {
   "page": "Web Apps",
   "section": "Google apps",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start Google Messages using `Super + Shift + Ctrl + G`, Google Photos using `Super + Shift + P`, and Google Maps using `Super + Shift + S`."
+  "text": "You can start Google Messages using `Super + Shift + Ctrl + G`, Google Photos using `Super + Shift + P`, and Google Maps using `Super + Shift + S`.",
+  "title": "Google apps at your fingertips"
  },
  {
   "page": "Web Apps",
   "section": "Google apps",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "Google Contacts is available through the app launcher (`Super + Space`)."
+  "text": "Google Contacts is available through the app launcher (`Super + Space`).",
+  "title": "Looking for a contact?"
  },
  {
   "page": "Web Apps",
   "section": "X",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start X using `Super + Shift + X` and go straight to writing a new post with `Super + Shift + Alt + X`."
+  "text": "You can start X using `Super + Shift + X` and go straight to writing a new post with `Super + Shift + Alt + X`.",
+  "title": "Something to post?"
  },
  {
   "page": "Web Apps",
   "section": "YouTube",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You can start YouTube using `Super + Shift + Y`."
+  "text": "You can start YouTube using `Super + Shift + Y`.",
+  "title": "Open YouTube"
  },
  {
   "page": "Web Apps",
   "section": "Zoom",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You start Zoom using the application launcher (`Super + Space`)."
+  "text": "You start Zoom using the application launcher (`Super + Space`).",
+  "title": "Got a meeting?"
  },
  {
   "page": "Web Apps",
   "section": "Discord",
   "url": "https://omarchy.org/manual/web-apps/",
-  "text": "You start Discord using the application launcher (`Super + Space`)."
+  "text": "You start Discord using the application launcher (`Super + Space`).",
+  "title": "Open Discord"
  },
  {
   "page": "Gaming",
   "section": "",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "All gaming installers live under Install > Gaming in the Omarchy menu (`Super + Space`)."
+  "text": "All gaming installers live under Install > Gaming in the Omarchy menu (`Super + Space`).",
+  "title": "Game on!"
  },
  {
   "page": "Gaming",
   "section": "Steam",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install Steam by selecting Install > Gaming > Steam from the Omarchy menu (`Super + Space`)."
+  "text": "Install Steam by selecting Install > Gaming > Steam from the Omarchy menu (`Super + Space`).",
+  "title": "Install Steam"
  },
  {
   "page": "Gaming",
   "section": "Steam",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "After you've installed it, you'll be able to launch Steam with `Super + Space`."
+  "text": "After you've installed it, you'll be able to launch Steam with `Super + Space`.",
+  "title": "Launch Steam"
  },
  {
   "page": "Gaming",
   "section": "RetroArch",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install RetroArch by selecting Install > Gaming > RetroArch from the Omarchy menu (`Super + Space`)."
+  "text": "Install RetroArch by selecting Install > Gaming > RetroArch from the Omarchy menu (`Super + Space`).",
+  "title": "Retro gaming"
  },
  {
   "page": "Gaming",
   "section": "RetroArch",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Launch RetroArch with `Super + Space` and typing `retro`."
+  "text": "Launch RetroArch with `Super + Space` and typing `retro`.",
+  "title": "Launch RetroArch"
  },
  {
   "page": "Gaming",
   "section": "RetroArch",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "You can also give a favorite game its own entry in the app launcher with Install > Gaming > RetroArch Game Launcher, which lets you pick a core and a ROM, and jump straight into the game from `Super + Space`."
+  "text": "You can also give a favorite game its own entry in the app launcher with Install > Gaming > RetroArch Game Launcher, which lets you pick a core and a ROM, and jump straight into the game from `Super + Space`.",
+  "title": "Your favourite game, one search away"
  },
  {
   "page": "Gaming",
   "section": "Xbox Cloud Gaming",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install the Xbox Cloud Gaming web app by selecting Install > Gaming > Xbox Cloud Gaming from the Omarchy menu (`Super + Space`)."
+  "text": "Install the Xbox Cloud Gaming web app by selecting Install > Gaming > Xbox Cloud Gaming from the Omarchy menu (`Super + Space`).",
+  "title": "Xbox games in the cloud"
  },
  {
   "page": "Gaming",
   "section": "NVIDIA GeForce Now",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install the cloud-gaming service NVIDIA GeForce NOW by selecting Install > Gaming > NVIDIA GeForce NOW from the Omarchy menu (`Super + Space`)."
+  "text": "Install the cloud-gaming service NVIDIA GeForce NOW by selecting Install > Gaming > NVIDIA GeForce NOW from the Omarchy menu (`Super + Space`).",
+  "title": "Games in the cloud"
  },
  {
   "page": "Gaming",
   "section": "Minecraft",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install Minecraft by selecting Install > Gaming > Minecraft from the Omarchy menu (`Super + Space`)."
+  "text": "Install Minecraft by selecting Install > Gaming > Minecraft from the Omarchy menu (`Super + Space`).",
+  "title": "Time to build something?"
  },
  {
   "page": "Gaming",
   "section": "Xbox Controllers",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install support for Bluetooth Xbox controllers by selecting Install > Gaming > Xbox Controllers from the Omarchy menu (`Super + Space`)."
+  "text": "Install support for Bluetooth Xbox controllers by selecting Install > Gaming > Xbox Controllers from the Omarchy menu (`Super + Space`).",
+  "title": "Got an Xbox controller?"
  },
  {
   "page": "Gaming",
   "section": "Xbox Controllers",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Pair the controllers via Bluetooth (`Super + Ctrl + B`) and they'll work in all your games."
+  "text": "Pair the controllers via Bluetooth (`Super + Ctrl + B`) and they'll work in all your games.",
+  "title": "Pair your controller"
  },
  {
   "page": "Gaming",
   "section": "Moonlight (Game streaming from a PC)",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "You can also turn an Omarchy machine into the host by running `omarchy install service sunshine`, which installs Sunshine and opens the Moonlight streaming ports for your LAN and Tailscale."
+  "text": "You can also turn an Omarchy machine into the host by running `omarchy install service sunshine`, which installs Sunshine and opens the Moonlight streaming ports for your LAN and Tailscale.",
+  "title": "Stream games from this machine"
  },
  {
   "page": "Gaming",
   "section": "Battle.net",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install Battle.net by selecting Install > Gaming > Battle.net from the Omarchy menu (`Super + Space`)."
+  "text": "Install Battle.net by selecting Install > Gaming > Battle.net from the Omarchy menu (`Super + Space`).",
+  "title": "Install Battle.net"
  },
  {
   "page": "Gaming",
   "section": "Lutris (Windows games)",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install Lutris by selecting Install > Gaming > Lutris from the Omarchy menu (`Super + Space`)."
+  "text": "Install Lutris by selecting Install > Gaming > Lutris from the Omarchy menu (`Super + Space`).",
+  "title": "Playing Windows games?"
  },
  {
   "page": "Gaming",
   "section": "Heroic Launcher (Epic Games)",
   "url": "https://omarchy.org/manual/gaming/",
-  "text": "Install the Heroic Launcher by selecting Install > Gaming > Heroic (Epic Games) from the Omarchy menu (`Super + Space`)."
+  "text": "Install the Heroic Launcher by selecting Install > Gaming > Heroic (Epic Games) from the Omarchy menu (`Super + Space`).",
+  "title": "Got Epic Games?"
  },
  {
   "page": "Windows VM",
   "section": "",
   "url": "https://omarchy.org/manual/windows-vm/",
-  "text": "You can install it using Install > Windows from the Omarchy menu (`Super + Space`)."
+  "text": "You can install it using Install > Windows from the Omarchy menu (`Super + Space`).",
+  "title": "Need Windows?"
  },
  {
   "page": "Windows VM",
   "section": "Using it",
   "url": "https://omarchy.org/manual/windows-vm/",
-  "text": "If you'd rather leave it running, say you've got something working away in there, launch it with `omarchy windows vm launch --keep-alive` instead."
+  "text": "If you'd rather leave it running, say you've got something working away in there, launch it with `omarchy windows vm launch --keep-alive` instead.",
+  "title": "Leave Windows running"
  },
  {
   "page": "Windows VM",
   "section": "Limits and licensing",
   "url": "https://omarchy.org/manual/windows-vm/",
-  "text": "You can change the resource allocation later by re-running `omarchy-windows-vm install`, which rewrites the VM's configuration from your answers."
+  "text": "You can change the resource allocation later by re-running `omarchy-windows-vm install`, which rewrites the VM's configuration from your answers.",
+  "title": "Give Windows more room"
  },
  {
   "page": "Other Packages",
   "section": "",
   "url": "https://omarchy.org/manual/other-packages/",
-  "text": "You install a new Arch package by going to Install > Package in the Omarchy menu (`Super + Space`) and typing the package you want."
+  "text": "You install a new Arch package by going to Install > Package in the Omarchy menu (`Super + Space`) and typing the package you want.",
+  "title": "Install a package"
  },
  {
   "page": "Updates",
   "section": "",
   "url": "https://omarchy.org/manual/updates/",
-  "text": "Omarchy and your packages are kept up to date via Update > Omarchy in the Omarchy menu (`Super + Space`)."
+  "text": "Omarchy and your packages are kept up to date via Update > Omarchy in the Omarchy menu (`Super + Space`).",
+  "title": "Keep Omarchy up to date"
  },
  {
   "page": "Updates",
   "section": "Four channels",
   "url": "https://omarchy.org/manual/updates/",
-  "text": "You can switch between channels using Update > Channel from the Omarchy menu (or `omarchy-channel-set` in the terminal)."
+  "text": "You can switch between channels using Update > Channel from the Omarchy menu (or `omarchy-channel-set` in the terminal).",
+  "title": "Switch update channels"
  },
  {
   "page": "Updates",
   "section": "Rolling back bad updates",
   "url": "https://omarchy.org/manual/updates/",
-  "text": "If somehow your configuration files have been corrupted, you can also perform an Omarchy reinstall using `omarchy reinstall` in the terminal."
+  "text": "If somehow your configuration files have been corrupted, you can also perform an Omarchy reinstall using `omarchy reinstall` in the terminal.",
+  "title": "Configs in a mess?"
  },
  {
   "page": "Dotfiles",
   "section": "",
   "url": "https://omarchy.org/manual/dotfiles/",
-  "text": "The key configs can be edited straight from the Omarchy menu (`Super + Space`), like Setup > Monitors, Setup > Keybindings, Setup > Input, and Setup > Config > [file]."
+  "text": "The key configs can be edited straight from the Omarchy menu (`Super + Space`), like Setup > Monitors, Setup > Keybindings, Setup > Input, and Setup > Config > [file].",
+  "title": "Edit your configs from the menu"
  },
  {
   "page": "Dotfiles",
   "section": "Running scripts on system events",
   "url": "https://omarchy.org/manual/dotfiles/",
-  "text": "To install a script you've written elsewhere, use `omarchy hook install post-boot ~/my-hook`, which copies it in and makes it executable."
+  "text": "To install a script you've written elsewhere, use `omarchy hook install post-boot ~/my-hook`, which copies it in and makes it executable.",
+  "title": "Run a script at boot"
  },
  {
   "page": "Dotfiles",
   "section": "Adding your own menu entries",
   "url": "https://omarchy.org/manual/dotfiles/",
-  "text": "The Omarchy menu (`Super + Space`) can be extended with your own rows by editing `~/.config/omarchy/extensions/omarchy-menu.jsonc`."
+  "text": "The Omarchy menu (`Super + Space`) can be extended with your own rows by editing `~/.config/omarchy/extensions/omarchy-menu.jsonc`.",
+  "title": "Add your own menu items"
  },
  {
   "page": "Shell Plugins",
   "section": "",
   "url": "https://omarchy.org/manual/shell-plugins/",
-  "text": "The Omarchy desktop runs as a single long-lived Quickshell process called `omarchy-shell`, and almost everything you see on screen is a plugin inside it."
+  "text": "The Omarchy desktop runs as a single long-lived Quickshell process called `omarchy-shell`, and almost everything you see on screen is a plugin inside it.",
+  "title": "Everything is a plugin"
  },
  {
   "page": "Monitors",
   "section": "",
   "url": "https://omarchy.org/manual/monitors/",
-  "text": "You can also quickly step through the major monitor scaling ratios (1x, 1.25x, 1.6x, 2x, 3x, 4x) using `Super + /` to go higher and `Super + Alt + /` to go lower."
+  "text": "You can also quickly step through the major monitor scaling ratios (1x, 1.25x, 1.6x, 2x, 3x, 4x) using `Super + /` to go higher and `Super + Alt + /` to go lower.",
+  "title": "Too big or too small?"
  },
  {
   "page": "Monitors",
   "section": "Making text bigger or smaller",
   "url": "https://omarchy.org/manual/monitors/",
-  "text": "Run it without an argument to see where you're at, and `omarchy display text size reset` to go back to the default."
+  "text": "Run it without an argument to see where you're at, and `omarchy display text size reset` to go back to the default.",
+  "title": "Back to normal text size"
  },
  {
   "page": "Monitors",
   "section": "Extending and mirroring laptop displays",
   "url": "https://omarchy.org/manual/monitors/",
-  "text": "You can also control this manually using Trigger > Hardware in the Omarchy menu or `Super + Ctrl + Delete`."
+  "text": "You can also control this manually using Trigger > Hardware in the Omarchy menu or `Super + Ctrl + Delete`.",
+  "title": "Laptop screen on or off"
  },
  {
   "page": "Keyboard, Mouse, Trackpad",
   "section": "",
   "url": "https://omarchy.org/manual/keyboard-mouse-trackpad/",
-  "text": "You change all of it in `~/.config/hypr/input.lua`, which you can also reach via Setup > Input in the Omarchy menu (`Super + Space`)."
+  "text": "You change all of it in `~/.config/hypr/input.lua`, which you can also reach via Setup > Input in the Omarchy menu (`Super + Space`).",
+  "title": "Tweak your keyboard and mouse"
  },
  {
   "page": "Networking",
   "section": "",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "Networking in Omarchy is handled by NetworkManager, and you drive it from the network icon in the top bar or with `Super + Ctrl + W`."
+  "text": "Networking in Omarchy is handled by NetworkManager, and you drive it from the network icon in the top bar or with `Super + Ctrl + W`.",
+  "title": "Getting online"
  },
  {
   "page": "Networking",
   "section": "",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "If you'd rather stay in the terminal, `nmtui` gives you the same controls, and there's an `omarchy network` command group too."
+  "text": "If you'd rather stay in the terminal, `nmtui` gives you the same controls, and there's an `omarchy network` command group too.",
+  "title": "Networking in the terminal"
  },
  {
   "page": "Networking",
   "section": "Sharing your Wi-Fi",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "If you actually need the password itself, `omarchy network password <interface>` prints it."
+  "text": "If you actually need the password itself, `omarchy network password <interface>` prints it.",
+  "title": "What was the Wi-Fi password?"
  },
  {
   "page": "Networking",
   "section": "DNS",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "From the terminal, `omarchy dns` prints the current provider and `omarchy dns Cloudflare` sets one."
+  "text": "From the terminal, `omarchy dns` prints the current provider and `omarchy dns Cloudflare` sets one.",
+  "title": "Change your DNS"
  },
  {
   "page": "Networking",
   "section": "Pinning the Wi-Fi band",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "`omarchy network band` shows which band you're on, and `omarchy network band 5` pins it."
+  "text": "`omarchy network band` shows which band you're on, and `omarchy network band 5` pins it.",
+  "title": "Stick to 5 GHz"
  },
  {
   "page": "Networking",
   "section": "How fast is it?",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "From the terminal it's `omarchy network speedtest down` or `up`."
+  "text": "From the terminal it's `omarchy network speedtest down` or `up`.",
+  "title": "How fast is your internet?"
  },
  {
   "page": "Networking",
   "section": "Tailscale",
   "url": "https://omarchy.org/manual/networking/",
-  "text": "The terminal equivalent is `omarchy tailscale send <machine> [file...]`, and files sent to you land in `~/Downloads` automatically."
+  "text": "The terminal equivalent is `omarchy tailscale send <machine> [file...]`, and files sent to you land in `~/Downloads` automatically.",
+  "title": "Send a file over Tailscale"
  },
  {
   "page": "System sleep",
   "section": "Power profiles",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "You can see what your machine offers with `omarchy powerprofiles list`, and set the one you want for the state you're currently in with `omarchy powerprofiles set autodetect power-saver`."
+  "text": "You can see what your machine offers with `omarchy powerprofiles list`, and set the one you want for the state you're currently in with `omarchy powerprofiles set autodetect power-saver`.",
+  "title": "Save some battery"
  },
  {
   "page": "System sleep",
   "section": "Power profiles",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "To set the other state without unplugging anything, name it directly: `omarchy powerprofiles set battery power-saver`."
+  "text": "To set the other state without unplugging anything, name it directly: `omarchy powerprofiles set battery power-saver`.",
+  "title": "Set your battery profile"
  },
  {
   "page": "System sleep",
   "section": "Toggle suspend",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "You toggle suspend by running `omarchy toggle suspend` from the terminal."
+  "text": "You toggle suspend by running `omarchy toggle suspend` from the terminal.",
+  "title": "Turn suspend on or off"
  },
  {
   "page": "System sleep",
   "section": "Toggle hibernation",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "You set up hibernation by running `omarchy hibernation setup` from the terminal."
+  "text": "You set up hibernation by running `omarchy hibernation setup` from the terminal.",
+  "title": "Set up hibernation"
  },
  {
   "page": "System sleep",
   "section": "Toggle hibernation",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "When set up, you'll see the hibernate option under System (or `Super + Esc`), and then you can see if it works consistently on your system."
+  "text": "When set up, you'll see the hibernate option under System (or `Super + Esc`), and then you can see if it works consistently on your system.",
+  "title": "Try hibernating"
  },
  {
   "page": "System sleep",
   "section": "Toggle hibernation",
   "url": "https://omarchy.org/manual/system-sleep/",
-  "text": "If not, you can remove it again by running `omarchy hibernation remove`."
+  "text": "If not, you can remove it again by running `omarchy hibernation remove`.",
+  "title": "Don't want hibernation?"
  },
  {
   "page": "Hardware authentication",
   "section": "Fingerprint authentication",
   "url": "https://omarchy.org/manual/hardware-authentication/",
-  "text": "You can use this with Omarchy by running Setup > Security > Fingerprint in the Omarchy menu (`Super + Space`)."
+  "text": "You can use this with Omarchy by running Setup > Security > Fingerprint in the Omarchy menu (`Super + Space`).",
+  "title": "Unlock with your finger"
  },
  {
   "page": "Fonts",
   "section": "",
   "url": "https://omarchy.org/manual/fonts/",
-  "text": "You can change this through the Style > Font menu in the Omarchy menu (`Super + Space`)."
+  "text": "You can change this through the Style > Font menu in the Omarchy menu (`Super + Space`).",
+  "title": "Try another font"
  },
  {
   "page": "Backgrounds",
   "section": "",
   "url": "https://omarchy.org/manual/backgrounds/",
-  "text": "Hit `Super + Shift + F` to start another file manager, find your background, copy it over."
+  "text": "Hit `Super + Shift + F` to start another file manager, find your background, copy it over.",
+  "title": "Add your own wallpaper"
  },
  {
   "page": "Branding",
   "section": "Boot unlock",
   "url": "https://omarchy.org/manual/branding/",
-  "text": "You can use `omarchy plymouth preview` to see what your custom logo and colors would look like."
+  "text": "You can use `omarchy plymouth preview` to see what your custom logo and colors would look like.",
+  "title": "Preview your boot screen"
  },
  {
   "page": "Branding",
   "section": "Boot unlock",
   "url": "https://omarchy.org/manual/branding/",
-  "text": "If you want to revert, you can use `omarchy plymouth reset`."
+  "text": "If you want to revert, you can use `omarchy plymouth reset`.",
+  "title": "Undo your boot screen"
  },
  {
   "page": "Common tweaks",
   "section": "",
   "url": "https://omarchy.org/manual/common-tweaks/",
-  "text": "If you really screw everything up, you can reset all configs via `omarchy-reinstall`."
+  "text": "If you really screw everything up, you can reset all configs via `omarchy-reinstall`.",
+  "title": "Broke something?"
  },
  {
   "page": "Common tweaks",
   "section": "Remove window gaps",
   "url": "https://omarchy.org/manual/common-tweaks/",
-  "text": "On laptop displays, some people prefer not to waste any pixels on window gaps (or even a top bar, which you can toggle off with `Super + Shift + Space`)."
+  "text": "On laptop displays, some people prefer not to waste any pixels on window gaps (or even a top bar, which you can toggle off with `Super + Shift + Space`).",
+  "title": "Every pixel counts"
  },
  {
   "page": "Making your own theme",
   "section": "What an installed theme can contain",
   "url": "https://omarchy.org/manual/making-your-own-theme/",
-  "text": "Omarchy tells the two apart by whether the theme has its own git repo inside it, which is what `omarchy theme install` leaves behind when it clones."
+  "text": "Omarchy tells the two apart by whether the theme has its own git repo inside it, which is what `omarchy theme install` leaves behind when it clones.",
+  "title": "Installed or your own?"
  },
  {
   "page": "Troubleshooting",
   "section": "I broke my system with an update!",
   "url": "https://omarchy.org/manual/troubleshooting/",
-  "text": "If that doesn't work, use `omarchy-debug` to share with your problem on #omarchy-help in the Discord."
+  "text": "If that doesn't work, use `omarchy-debug` to share with your problem on #omarchy-help in the Discord.",
+  "title": "Still broken?"
  },
  {
   "page": "Troubleshooting",
   "section": "Why are some apps so large on my display?",
   "url": "https://omarchy.org/manual/troubleshooting/",
-  "text": "For Spotify, you can use `Ctrl + Minus` to shrink the UI (and `Ctrl + Plus` to make it bigger)."
+  "text": "For Spotify, you can use `Ctrl + Minus` to shrink the UI (and `Ctrl + Plus` to make it bigger).",
+  "title": "Spotify too big?"
  },
  {
   "page": "Troubleshooting",
   "section": "My laptop speakers sound off",
   "url": "https://omarchy.org/manual/troubleshooting/",
-  "text": "`omarchy audio tuning status` tells you whether one is active on your machine, and `omarchy audio tuning off` turns it off if you'd rather hear the speakers raw."
+  "text": "`omarchy audio tuning status` tells you whether one is active on your machine, and `omarchy audio tuning off` turns it off if you'd rather hear the speakers raw.",
+  "title": "Speakers sound odd?"
  },
  {
   "page": "FAQ",
   "section": "How do I check how fast my disk is?",
   "url": "https://omarchy.org/manual/faq/",
-  "text": "Trigger > Speed Test > Disk Speed Test measures live read and write speed on your drive, or `omarchy disk speedtest` from the terminal."
+  "text": "Trigger > Speed Test > Disk Speed Test measures live read and write speed on your drive, or `omarchy disk speedtest` from the terminal.",
+  "title": "How fast is your disk?"
  },
  {
   "page": "FAQ",
   "section": "How do I add a printer?",
   "url": "https://omarchy.org/manual/faq/",
-  "text": "Printing is set up and running out of the box, and you add each printer yourself from Print Settings in the app launcher (`Super + Space`)."
+  "text": "Printing is set up and running out of the box, and you add each printer yourself from Print Settings in the app launcher (`Super + Space`).",
+  "title": "Need to print something?"
  },
  {
   "page": "System snapshots",
   "section": "",
   "url": "https://omarchy.org/manual/system-snapshots/",
-  "text": "We create snapshots automatically on every Omarchy update, but should you want to create your own, you can use `omarchy-snapshot create`."
+  "text": "We create snapshots automatically on every Omarchy update, but should you want to create your own, you can use `omarchy-snapshot create`.",
+  "title": "Take a snapshot"
  },
  {
   "page": "System snapshots",
   "section": "",
   "url": "https://omarchy.org/manual/system-snapshots/",
-  "text": "Alternatively, you can utilize `omarchy-snapshot restore`."
+  "text": "Alternatively, you can utilize `omarchy-snapshot restore`.",
+  "title": "Go back in time"
  }
 ];

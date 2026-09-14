@@ -161,11 +161,33 @@ Item {
 
   readonly property var titles: [
     "Did you know?",
-    "It looks like you're using Omarchy!",
     "Here's a tip!",
     "Psst!",
-    "Quick one!"
+    "Quick one!",
+    "Pro tip!",
+    "Hey, listen!",
+    "Fun fact!",
+    "While you're here...",
+    "Try this!",
+    "A little secret",
+    "Before I forget...",
+    "Straight from the manual",
+    "You might like this one",
+    "Time saver!",
+    "Knock knock!"
   ]
+
+  property string lastTitle: ""
+
+  // Every tip in Tips.js carries a title of its own; the general ones above
+  // are only for a tip that somehow has none.
+  function tipTitle(tip) {
+    var own = String(tip && tip.title || "").slice(0, 80)
+    if (own !== "") return own
+    var options = root.titles.filter(function(title) { return title !== root.lastTitle })
+    root.lastTitle = root.pick(options)
+    return root.lastTitle
+  }
 
   property string agentText: ""
 
@@ -173,7 +195,7 @@ Item {
     if (root.bubbleKind === "agent")
       return root.tipMarkup(root.agentText)
     if (root.bubbleKind === "hello")
-      return "It looks like you're using Omarchy! Click me any time and I'll show you something from the manual."
+      return "Click me any time and I'll show you something from the manual."
     if (root.bubbleKind === "goodbye")
       return "I can ride off for the rest of this session. Bring me back with <b>omarchy-shell jankeesvw.clippy show</b>."
     return root.tip ? root.tipMarkup(root.tip.text) : ""
@@ -183,20 +205,33 @@ Item {
 
   property var deck: []
 
+  function shuffledDeck(all) {
+    var order = []
+    for (var i = 0; i < all.length; i++) order.push(i)
+    for (var j = order.length - 1; j > 0; j--) {
+      var k = Math.floor(Math.random() * (j + 1))
+      var swap = order[j]; order[j] = order[k]; order[k] = swap
+    }
+    // Hotkeys alone is 40% of the deck, so never two tips from the same
+    // manual page in a row while another page still has some left.
+    var spread = []
+    var lastPage = ""
+    while (order.length > 0) {
+      var at = 0
+      while (at < order.length && all[order[at]].page === lastPage) at++
+      if (at === order.length) at = 0
+      lastPage = all[order[at]].page
+      spread.push(order.splice(at, 1)[0])
+    }
+    return spread
+  }
+
   function nextTip() {
     var all = TipData.tips
     if (!all || all.length === 0) return null
-    var order = root.deck
-    if (order.length === 0) {
-      order = []
-      for (var i = 0; i < all.length; i++) order.push(i)
-      for (var j = order.length - 1; j > 0; j--) {
-        var k = Math.floor(Math.random() * (j + 1))
-        var swap = order[j]; order[j] = order[k]; order[k] = swap
-      }
-    }
-    var index = order[order.length - 1]
-    root.deck = order.slice(0, -1)
+    if (root.deck.length === 0) root.deck = root.shuffledDeck(all)
+    var index = root.deck[0]
+    root.deck = root.deck.slice(1)
     return all[index]
   }
 
@@ -226,7 +261,7 @@ Item {
     if (!next) return
     root.tip = next
     root.bubbleKind = "tip"
-    root.bubbleTitle = root.titles[Math.floor(Math.random() * root.titles.length)]
+    root.bubbleTitle = root.tipTitle(next)
     root.openBubble(animation)
   }
 
