@@ -10,6 +10,16 @@ A paperclip in the bottom-right corner of your screen. His eyes follow your mous
 omarchy plugin add https://github.com/jankeesvw/omarchy-clippy --enable
 ```
 
+That gives you Clippy, but not a launcher entry: a shell plugin is not an application, and the launcher only indexes `.desktop` files. To get one as well, run the installer from a clone instead:
+
+```bash
+git clone https://github.com/jankeesvw/omarchy-clippy
+cd omarchy-clippy
+./install.sh
+```
+
+It runs `omarchy plugin add` (or `omarchy plugin update` when Clippy is already there) and `omarchy plugin enable`, and writes `~/.local/share/applications/clippy.desktop`, whose `Exec` is `omarchy-shell jankeesvw.clippy toggle`. Nothing else. Search for Clippy in the launcher to send him away or bring him back.
+
 ## Requirements
 
 Omarchy 4 (Quattro) on Hyprland. Clippy uses only what Omarchy already ships: the system `python3` for the cursor helper and `omarchy-launch-webapp` to open the manual. No packages to install, no accounts, no API keys.
@@ -137,10 +147,16 @@ The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyp
 omarchy plugin remove jankeesvw.clippy
 ```
 
-Clippy writes no files, so there is nothing left behind besides his entry in `~/.config/omarchy/shell.json`, which the command above removes.
+Clippy writes no files, so there is nothing left behind besides his entry in `~/.config/omarchy/shell.json`, which the command above removes. If you used `install.sh`, also remove the launcher entry:
+
+```bash
+rm ~/.local/share/applications/clippy.desktop
+```
 
 ## License
 
 MIT. Clippy here is an original drawing of a paperclip, not Microsoft's artwork; the animations are inspired by the Office Assistant's repertoire, and no original assets are used.
 
 The tips in `Tips.js` are sentences and hotkey tables taken from the [Omarchy manual](https://github.com/omacom/omarchy), copyright David Heinemeier Hansson, released under the MIT License.
+
+The launcher icon `icon.png` is the paperclip emoji from [Noto Color Emoji](https://github.com/googlefonts/noto-emoji), copyright Google, released under the SIL Open Font License 1.1.
