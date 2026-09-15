@@ -119,13 +119,14 @@ Add any of these to the `jankeesvw.clippy` entry in the `plugins` array of `~/.c
   "intervalMinutes": 20,
   "greeting": true,
   "dodge": true,
+  "idleMotion": true,
   "monitor": "DP-1",
   "marginX": 24,
   "marginY": 24
 }
 ```
 
-`intervalMinutes` is how often he offers a tip unprompted; `0` means only when you click him. `dodge` turns the see-through behaviour off when set to `false`. `marginX` and `marginY` are his distance from the bottom-right corner, and are what dragging him writes back. `monitor` is an output name from `hyprctl monitors`; without it he stays on the monitor that had focus when the shell started.
+`intervalMinutes` is how often he offers a tip unprompted; `0` means only when you click him. `dodge` turns the see-through behaviour off when set to `false`. `idleMotion` set to `false` stops the slow sway and breathing he does while nothing happens; they repaint his surface every frame, which on an older laptop costs around a tenth of a CPU core. His eyes still follow the mouse and every reaction still plays. `marginX` and `marginY` are his distance from the bottom-right corner, and are what dragging him writes back. `monitor` is an output name from `hyprctl monitors`; without it he stays on the monitor that had focus when the shell started.
 
 ## How it works
 
@@ -139,7 +140,7 @@ A layer surface only receives pointer positions while the pointer is over it, so
 
 ## Privacy
 
-The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyprland's socket and hands it to the shell over a pipe, and nothing is logged or stored. Clippy writes no files of his own: the only thing he saves is where you dragged him, as `marginX` and `marginY` on his own entry in `~/.config/omarchy/shell.json`, through the shell's settings API. The only network access is the manual page you open with the Open manual button, in your browser.
+The cursor position stays on your machine: `bin/clippy-cursor` reads it from Hyprland's socket and hands it to the shell over a pipe, and nothing is logged or stored. Clippy writes no files of his own: the only thing he saves is where you dragged him, as `marginX` and `marginY` on his own entry in `~/.config/omarchy/shell.json`, through the shell's settings API. That API does not hand a service its settings, so he reads his own entry from that same file, at startup and again just before saving his position; files over 256 KB are ignored. The only network access is the manual page you open with the Open manual button, in your browser.
 
 ## Removing
 

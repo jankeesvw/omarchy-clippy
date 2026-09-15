@@ -35,14 +35,12 @@ Item {
   // plugin and every setting in shell.json was silently ignored. Read the
   // user's shell.json directly instead. If the shell ever passes a real
   // shellConfig to third-party plugins, `setting()` prefers it.
-  readonly property string userConfigPath: {
-    var home = Quickshell.env("HOME") || ""
-    var xdg = Quickshell.env("XDG_CONFIG_HOME")
-    var base = (xdg && xdg.length > 0) ? xdg : home + "/.config"
-    return base + "/omarchy/shell.json"
-  }
+  // The same path the shell itself reads and writes, which ignores
+  // XDG_CONFIG_HOME, so both always look at one file.
+  readonly property string userConfigPath: (Quickshell.env("HOME") || "") + "/.config/omarchy/shell.json"
 
-  // Settings are resolved once, at startup, so a blocking read is enough.
+  // Settings are resolved at startup, and the file is read again just before
+  // the position is saved, so a blocking read is enough.
   FileView {
     id: userConfig
     path: root.userConfigPath
@@ -50,9 +48,15 @@ Item {
     printErrors: false
   }
 
+  // shell.json is a few kilobytes; anything far bigger is not one we should
+  // be parsing on every setting, so it is treated as absent.
+  readonly property int userConfigLimit: 256 * 1024
+
   function pluginsConfig() {
+    var text = userConfig.text() || ""
+    if (text === "" || text.length > root.userConfigLimit) return []
     try {
-      var parsed = JSON.parse(userConfig.text() || "")
+      var parsed = JSON.parse(text)
       if (parsed && Array.isArray(parsed.plugins)) return parsed.plugins
     } catch (e) {
       console.warn("clippy: could not read shell.json:", e)
@@ -532,6 +536,9 @@ Item {
   // from being dropped when the position is written back.
   function savePosition() {
     if (!root.shell || typeof root.shell.updateEntryInline !== "function") return
+    // Read the file again first: settings edited while he runs would
+    // otherwise be written back over with what was there at startup.
+    userConfig.reload()
     var settings = {}
     var entry = root.ownEntry()
     for (var key in entry) if (key !== "id") settings[key] = entry[key]
