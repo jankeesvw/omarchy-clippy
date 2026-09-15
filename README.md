@@ -10,11 +10,9 @@ A paperclip in the bottom-right corner of your screen. His eyes follow your mous
 omarchy plugin add https://github.com/jankeesvw/omarchy-clippy --enable
 ```
 
-That gives you Clippy, but not a launcher entry: a shell plugin is not an application, and the launcher only indexes `.desktop` files. To get one as well, run the installer from a clone instead:
+That gives you Clippy, but not a launcher entry: a shell plugin is not an application, and the launcher only indexes `.desktop` files. To get one as well, run the installer from a checkout of this repository instead:
 
 ```bash
-git clone https://github.com/jankeesvw/omarchy-clippy
-cd omarchy-clippy
 ./install.sh
 ```
 
