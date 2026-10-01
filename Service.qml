@@ -295,14 +295,11 @@ Item {
       .replace(/`([^`]{1,80})`/g, "<b>$1</b>")
   }
 
-  // What he does when you ask for a tip. Never the same one twice in a row.
-  readonly property var tipReactions: ["point", "scratch", "bang", "glasses", "brows", "hop", "wiggle", "flip", "atom"]
-  property string lastReaction: ""
+  // What he does when you ask for a tip, one after the other.
+  readonly property var tipReactions: ["point", "scratch", "bang", "glasses", "brows", "hop", "wiggle", "flip", "atom", "logo"]
 
   function tipReaction() {
-    var options = root.tipReactions.filter(function(name) { return name !== root.lastReaction })
-    root.lastReaction = root.pick(options)
-    return root.lastReaction
+    return root.nextIn("tip", root.tipReactions)
   }
 
   function showTip(animation) {
@@ -670,7 +667,7 @@ Item {
     hop: hopAnim, attention: attentionAnim, wiggle: wiggleAnim, flip: flipAnim,
     look: lookAnim, brows: browsAnim, atom: atomAnim, pile: pileAnim, check: checkAnim,
     bang: bangAnim, point: pointAnim, scratch: scratchAnim, tap: tapAnim,
-    glasses: glassesAnim, music: musicAnim
+    glasses: glassesAnim, music: musicAnim, logo: logoAnim
   })
 
   function anyRunning() {
@@ -703,7 +700,7 @@ Item {
   }
 
   function flourish() {
-    root.play(root.pick(root.smallIdles.concat(root.bigIdles)))
+    root.play(root.nextIn("fidget", root.smallIdles.concat(root.bigIdles)))
   }
 
   function fallAsleep() {
@@ -744,15 +741,12 @@ Item {
     root.posBottom = root.marginY
     root.latchStartMonitor()
     cursorProc.running = root.helperPath !== ""
+    root.helloPending = root.greeting
     greetAnim.start()
-    if (root.greeting) helloTimer.start()
   }
 
-  Timer {
-    id: helloTimer
-    interval: 3600
-    onTriggered: root.sayHello()
-  }
+  // Set at startup so the greeting says hello once it has turned into the logo.
+  property bool helloPending: false
 
   // Blinking, with the occasional double blink.
   Timer {
@@ -798,7 +792,7 @@ Item {
   // once he has been ignored for a while.
   property real lastInteractionAt: Date.now()
   readonly property var smallIdles: ["look", "brows", "tap", "glasses"]
-  readonly property var bigIdles: ["atom", "pile", "music", "scratch", "bang", "flip"]
+  readonly property var bigIdles: ["atom", "pile", "music", "scratch", "bang", "flip", "logo"]
 
   function interacted() {
     root.lastInteractionAt = Date.now()
@@ -806,6 +800,16 @@ Item {
 
   function pick(list) {
     return list[Math.floor(Math.random() * list.length)]
+  }
+
+  // Walks through a list in order, one step further on every call, so each
+  // animation comes by once before any of them repeats.
+  property var turns: ({})
+
+  function nextIn(name, list) {
+    var i = root.turns[name] || 0
+    root.turns[name] = i + 1
+    return list[i % list.length]
   }
 
   Timer {
@@ -818,8 +822,8 @@ Item {
       var quiet = Date.now() - root.lastInteractionAt
       if (quiet < 180000) return
       var roll = Math.random()
-      if (quiet > 600000 && roll < 0.3) root.play(root.pick(root.bigIdles))
-      else if (roll < 0.6) root.play(root.pick(root.smallIdles))
+      if (quiet > 600000 && roll < 0.3) root.play(root.nextIn("big", root.bigIdles))
+      else if (roll < 0.6) root.play(root.nextIn("small", root.smallIdles))
     }
   }
 
@@ -980,6 +984,17 @@ Item {
     ScriptAction { script: root.resetRig() }
   }
 
+  // Turns into the Omarchy logo for a moment.
+  SequentialAnimation {
+    id: logoAnim
+    ScriptAction { script: root.beginMorph("logo") }
+    NumberAnimation { target: root; property: "morph"; to: 1; duration: 700; easing.type: Easing.OutBack }
+    PauseAnimation { duration: 1600 }
+    ScriptAction { script: root.beginMorph("clip") }
+    NumberAnimation { target: root; property: "morph"; to: 1; duration: 600; easing.type: Easing.OutBack }
+    ScriptAction { script: root.resetRig() }
+  }
+
   // Wave: stretch up into an exclamation mark.
   SequentialAnimation {
     id: bangAnim
@@ -1117,7 +1132,9 @@ Item {
     ScriptAction { script: { root.resetRig(); root.play("hop") } }
   }
 
-  // Greeting: ride in on a bicycle made of himself.
+  // Greeting: ride in on a bicycle made of himself, become the clip, then turn
+  // into the Omarchy logo and say hello, and stay the logo for ten seconds
+  // before he becomes the clip again.
   SequentialAnimation {
     id: greetAnim
     ScriptAction {
@@ -1141,6 +1158,18 @@ Item {
       }
     }
     PauseAnimation { duration: 250 }
+    ScriptAction { script: root.beginMorph("clip") }
+    NumberAnimation { target: root; property: "morph"; to: 1; duration: 700; easing.type: Easing.OutBack }
+    PauseAnimation { duration: 700 }
+    ScriptAction { script: root.beginMorph("logo") }
+    NumberAnimation { target: root; property: "morph"; to: 1; duration: 700; easing.type: Easing.OutBack }
+    ScriptAction {
+      script: {
+        if (root.helloPending) root.sayHello()
+        root.helloPending = false
+      }
+    }
+    PauseAnimation { duration: 10000 }
     ScriptAction { script: root.beginMorph("clip") }
     ParallelAnimation {
       NumberAnimation { target: root; property: "morph"; to: 1; duration: 700; easing.type: Easing.OutBack }
