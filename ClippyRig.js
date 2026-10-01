@@ -138,6 +138,29 @@ var builders = {
     return { pts: pts, l: eye(24, 134, 1.55), r: eye(78, 134, 1.55), brows: 0 }
   },
 
+  // The Omarchy logo from the omarchy font (glyph U+E900): two nested squares,
+  // each with a gap, tied together by short bars. The glyph is 1024 units with
+  // 70 unit strokes, so the wire runs along the middle of every stroke and
+  // doubles back over the bars, like the check mark does.
+  logo: function() {
+    var s = 84 / 1024
+    var at = function(u, v) { return [8 + u * s, 62 + v * s] }
+    var route = [
+      [736, 849], [849, 849], [849, 175], [510, 175], [510, 35], [549, 35], [35, 35],
+      [35, 512], [175, 512], [175, 175], [510, 175], [175, 175], [175, 849], [512, 849],
+      [512, 989], [512, 849], [551, 849], [175, 849], [175, 512], [35, 512], [35, 989],
+      [989, 989], [989, 35], [626, 35]
+    ]
+    var start = at(route[0][0], route[0][1])
+    var path = new Path(start[0], start[1])
+    for (var i = 1; i < route.length; i++) {
+      var p = at(route[i][0], route[i][1])
+      path.line(p[0], p[1])
+    }
+    var l = at(410, 512), r = at(614, 512)
+    return { pts: path.p, l: eye(l[0], l[1], 0.8), r: eye(r[0], r[1], 0.8), brows: 0 }
+  },
+
   // GestureUp: the free end shoots up past his head towards the bubble, with
   // a little crook at the tip like a finger.
   point: function() {

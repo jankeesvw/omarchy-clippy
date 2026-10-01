@@ -26,7 +26,7 @@ Omarchy 4 (Quattro) on Hyprland. Clippy uses only what Omarchy already ships: th
 
 | Do | He |
 | --- | --- |
-| Start the shell | rides in on a bicycle made of himself, his eyes as the wheels |
+| Start the shell | rides in on a bicycle made of himself, his eyes as the wheels, becomes a paperclip, then turns into the Omarchy logo to say hello and stays that way for ten seconds before he is a paperclip again |
 | Move the mouse | follows it with his eyes, even from the other side of the screen |
 | Move the mouse near him | turns see-through and lets your clicks pass to whatever is behind him; rest the pointer on him for a moment and he is solid again |
 | Drag him, or Super + drag | picks him up and puts him wherever you drop him; the spot is remembered |
@@ -57,6 +57,7 @@ The animations are modelled on the Office Assistant's own, but drawn from scratc
 | `music` | Hearing | headphones on, nodding along |
 | `look` | IdleSideToSide | looks left and right |
 | `brows` | IdleEyeBrowRaise | raises his eyebrows |
+| `logo` | | bends into the Omarchy logo, his eyes in the middle |
 | `hop`, `wiggle`, `flip` | | the small stuff in between |
 
 Like the Office Assistant, the big animations are reactions to what you do: every tip, button and click has its own. Left alone he idles in levels. For three minutes after you dealt with him he only blinks and follows the mouse; after that a small one (`look`, `brows`, `tap`, `glasses`) now and then; and once he has been ignored for ten minutes, occasionally a big one (`atom`, `pile`, `music`, `scratch`, `bang`, `flip`).
