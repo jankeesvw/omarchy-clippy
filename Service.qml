@@ -5,6 +5,7 @@ import Quickshell.Io
 import Quickshell.Wayland
 import Quickshell.Hyprland
 import qs.Commons
+import qs.Commons as Commons
 import "Tips.js" as TipData
 import "ClippyRig.js" as Rig
 
@@ -1460,7 +1461,7 @@ Item {
             preferredRendererType: Shape.CurveRenderer
             opacity: root.selected && !root.dragging ? 1 : 0
             Behavior on opacity { NumberAnimation { duration: 160 } }
-            WirePath { strokeColor: Color.accent; strokeWidth: 13 }
+            WirePath { strokeColor: Commons.Color.accent; strokeWidth: 13 }
           }
 
           Shape {
